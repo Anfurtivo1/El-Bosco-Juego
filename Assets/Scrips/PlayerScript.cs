@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
-{
+{//AquÃ­ empieza el PlayerScript
     public Rigidbody2D jugador;
     bool tocandoTierra = true;
     int cuentaSaltos = 0;
@@ -123,7 +123,7 @@ public class PlayerScript : MonoBehaviour
     private void perderVida(int cantidad)
     {
         if (isInvincible) return;
-        Debug.Log("*Colisionó: Vida fuera");
+        Debug.Log("*Colisionï¿½: Vida fuera");
         vidas = vidas - cantidad;
         textoVidas.text = ""+vidas;
 
