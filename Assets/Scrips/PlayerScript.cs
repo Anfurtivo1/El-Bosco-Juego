@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
-{
+{//AquÃ­ empieza el PlayerScript
+    public static PlayerScript progreso;
     public Rigidbody2D jugador;
     bool tocandoTierra = true;
     int cuentaSaltos = 0;
@@ -50,6 +51,11 @@ public class PlayerScript : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        progreso = this;
+    }
+
     private void Start()
     {
         textoVidas.text = "" + vidas;
@@ -60,6 +66,7 @@ public class PlayerScript : MonoBehaviour
         if (vivo)
         {
             score += Time.deltaTime * 4;
+            
             texto.text = "Score : " + score.ToString("F");
         }
 
@@ -123,7 +130,7 @@ public class PlayerScript : MonoBehaviour
     private void perderVida(int cantidad)
     {
         if (isInvincible) return;
-        Debug.Log("*Colisionó: Vida fuera");
+        Debug.Log("*Colisionï¿½: Vida fuera");
         vidas = vidas - cantidad;
         textoVidas.text = ""+vidas;
 
