@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {//Aquí empieza el PlayerScript
+    public static PlayerScript progreso;
     public Rigidbody2D jugador;
     bool tocandoTierra = true;
     int cuentaSaltos = 0;
@@ -50,6 +51,11 @@ public class PlayerScript : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        progreso = this;
+    }
+
     private void Start()
     {
         textoVidas.text = "" + vidas;
@@ -60,6 +66,7 @@ public class PlayerScript : MonoBehaviour
         if (vivo)
         {
             score += Time.deltaTime * 4;
+            
             texto.text = "Score : " + score.ToString("F");
         }
 
