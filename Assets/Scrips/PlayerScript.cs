@@ -24,6 +24,7 @@ public class PlayerScript : MonoBehaviour
     private GameObject model;
     public int damage;
     public Text textoVidas;
+    RaycastHit hit;
 
     private IEnumerator BecomeTemporarilyInvincible()
     {
@@ -68,6 +69,35 @@ public class PlayerScript : MonoBehaviour
             score += Time.deltaTime * 4;
             
             texto.text = "Score : " + score.ToString("F");
+
+            ////Length of the ray
+            //float laserLength = 5f;
+            ////Obtain the layerMask of the layer
+            //int layerMask = LayerMask.GetMask("Enemigo");
+
+            ////Get the first object hit by the ray
+            //RaycastHit2D hit = Physics2D.Raycast(jugador.transform.position, Vector2.left, laserLength, layerMask);
+
+            ////If the collider of the object hit is not NUll
+            //if (hit.collider != null)
+            //{
+            //    //Hit something, print the tag of the object
+            //    Debug.Log("Hitting: " + hit.collider.tag);
+            //}
+
+            ////if (hit.collider.tag.Equals("Enemigo 5"))
+            ////{
+            ////    //hit.collider.gameObject
+            ////    //Hit something, print the tag of the object
+            ////    Debug.Log("Hitting: " + hit.collider.tag);
+            ////}
+
+            ////Method to draw the ray in scene for debug purpose
+            //Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.red);
+
+
+
+
         }
 
         //comprobarBloque();
