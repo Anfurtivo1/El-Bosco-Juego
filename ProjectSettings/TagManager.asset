@@ -6,11 +6,13 @@ TagManager:
   tags:
   - Suelo
   - nextLine
+  - Spike
+  - finishLine
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemigo
   - Water
   - UI
   - 

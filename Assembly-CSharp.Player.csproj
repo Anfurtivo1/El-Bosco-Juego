@@ -57,9 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scrips\SpikeGenerator.cs" />
+    <Compile Include="Assets\Scrips\ProgressBar.cs" />
     <Compile Include="Assets\Scrips\SpikeScript.cs" />
     <Compile Include="Assets\Scrips\PlayerScript.cs" />
-    <Compile Include="Assets\Scrips\ProgressBar.cs" />
+    <Compile Include="Assets\Scrips\Enemigo 5.cs" />
+    <Compile Include="Assets\Scrips\Enemigo 1.cs" />
+    <Compile Include="Assets\Scrips\Enemigo 3.cs" />
+    <Compile Include="Assets\Scrips\Enemigo 2.cs" />
+    <Compile Include="Assets\Scrips\Enemigo 4.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
