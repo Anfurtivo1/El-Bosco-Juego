@@ -6,7 +6,13 @@ public class SpikeScript : MonoBehaviour
 {
     [HideInInspector]
     public SpikeGenerator spikeGenerator;
-    
+    public GameObject spike;
+    public Rigidbody2D cuerpo;
+
+    private void Awake()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -14,7 +20,7 @@ public class SpikeScript : MonoBehaviour
         transform.Translate(Vector2.left * spikeGenerator.currentSpeed * Time.deltaTime);
 
         //Length of the ray
-        float laserLength = 5f;
+        float laserLength = 10f;
         //Obtain the layerMask of the layer
         int layerMask = LayerMask.GetMask("Default");
 
@@ -25,7 +31,10 @@ public class SpikeScript : MonoBehaviour
         if (hit.collider != null)
         {
             //Hit something, print the tag of the object
-            Debug.Log("Hitting: " + hit.collider.tag);
+            //Debug.Log("detected: " + hit.collider.tag);
+            this.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Impulse);
+            Debug.Log(spike.GetComponent<Rigidbody2D>().mass);
+            //spike.GetComponent<Rigidbody2D>().AddForce(Vector2.up*10000000);
         }
 
         //if (hit.collider.tag.Equals("Enemigo 5"))
@@ -36,7 +45,7 @@ public class SpikeScript : MonoBehaviour
         //}
 
         //Method to draw the ray in scene for debug purpose
-        Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.red);
+        Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.blue);
 
 
     }
