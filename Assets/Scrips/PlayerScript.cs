@@ -160,7 +160,7 @@ public class PlayerScript : MonoBehaviour
     private void perderVida(int cantidad)
     {
         if (isInvincible) return;
-        Debug.Log("*Colision�: Vida fuera");
+        //Debug.Log("*Colision�: Vida fuera");
         vidas = vidas - cantidad;
         textoVidas.text = ""+vidas;
 

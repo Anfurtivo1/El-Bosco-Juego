@@ -22,6 +22,7 @@ public class SpikeGenerator : MonoBehaviour
     {
         GameObject newSpike = Instantiate(spike, transform.position, transform.rotation);
         newSpike.GetComponent<SpikeScript>().spikeGenerator = this;
+        newSpike.GetComponent<SpikeScript>().spike = newSpike;
         newSpike.layer = 3;
     }
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ProgressBar : MonoBehaviour
 {
     public Image progressBar;
-    [HideInInspector]public GameObject finalNivel;
+    public GameObject finalNivel;
     public float maxDistance;
     float progreso2;
     // Start is called before the first frame update
