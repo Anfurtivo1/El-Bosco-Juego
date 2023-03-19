@@ -8,6 +8,8 @@ TagManager:
   - nextLine
   - Spike
   - finishLine
+  - Roof
+  - Bullet
   layers:
   - Default
   - TransparentFX

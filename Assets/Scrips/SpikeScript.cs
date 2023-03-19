@@ -9,15 +9,14 @@ public class SpikeScript : MonoBehaviour
     public GameObject spike;
     public Rigidbody2D cuerpo;
 
-    private void Awake()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * spikeGenerator.currentSpeed * Time.deltaTime);
+        if (spikeGenerator!= null)
+        {
+            transform.Translate(Vector2.left * spikeGenerator.currentSpeed * Time.deltaTime);
+        }
+        
 
         //Length of the ray
         float laserLength = 10f;
@@ -32,8 +31,7 @@ public class SpikeScript : MonoBehaviour
         {
             //Hit something, print the tag of the object
             //Debug.Log("detected: " + hit.collider.tag);
-            this.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Impulse);
-            Debug.Log(spike.GetComponent<Rigidbody2D>().mass);
+            //this.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Impulse);
             //spike.GetComponent<Rigidbody2D>().AddForce(Vector2.up*10000000);
         }
 

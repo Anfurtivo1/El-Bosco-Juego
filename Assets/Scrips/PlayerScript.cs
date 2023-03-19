@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour
 
     private IEnumerator BecomeTemporarilyInvincible()
     {
-        Debug.Log("Player turned invincible!");
+        //Debug.Log("Player turned invincible!");
         isInvincible = true;
 
         // Flash on and off for roughly invincibilityDurationSeconds seconds
@@ -147,6 +147,14 @@ public class PlayerScript : MonoBehaviour
                     perderVida(damage);
 
                 }
+
+                if (objeto.collider.gameObject.tag == "Bullet")
+                {
+                    Destroy(objeto.collider.gameObject);
+                    perderVida(damage);
+
+                }
+
             }
         }
 
