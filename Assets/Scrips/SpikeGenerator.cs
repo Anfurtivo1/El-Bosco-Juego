@@ -12,22 +12,10 @@ public class SpikeGenerator : MonoBehaviour
     public float SpeedMultiplier;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         currentSpeed = minSpeed;
         generateSpike();
-    }
-
-    public void generateSpike()
-    {
-        GameObject newSpike = Instantiate(spike, transform.position, transform.rotation);
-        newSpike.GetComponent<SpikeScript>().spikeGenerator = this;
-    }
-
-    public void generateRandomWave()
-    {
-        float timeBetween = Random.Range(0.01f,1.2f);
-        Invoke("generateSpike", timeBetween);
     }
 
     // Update is called once per frame
@@ -37,8 +25,21 @@ public class SpikeGenerator : MonoBehaviour
         {
             currentSpeed += SpeedMultiplier;
         }
+        
     }
 
-    
+    public void generateSpike()
+    {
+        GameObject newSpike = Instantiate(spike, transform.position, transform.rotation);
+        newSpike.GetComponent<SpikeScript>().spikeGenerator = this;
+        newSpike.GetComponent<SpikeScript>().spike = newSpike;
+        newSpike.layer = 3;
+    }
+
+    public void generateRandomWave()
+    {
+        float timeBetween = Random.Range(0.01f,1.2f);
+        Invoke("generateSpike", timeBetween);
+    }
 
 }

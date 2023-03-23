@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1395572059185883916}
   - component: {fileID: 1395572059185883919}
   - component: {fileID: 7137552976749756546}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spike
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1395572059185883913
 SpriteRenderer:
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -147,3 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spikeGenerator: {fileID: 0}
+  spike: {fileID: 0}
+  cuerpo: {fileID: 1395572059185883919}
