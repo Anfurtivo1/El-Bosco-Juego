@@ -9,6 +9,7 @@ public class PowerGenerator : MonoBehaviour
     public GameObject pUp;
     public float maxSpeed;
     public float currentSpeed;
+    public GameObject player;
 
     public float SpeedMultiplier;
 
@@ -31,15 +32,23 @@ public class PowerGenerator : MonoBehaviour
 
     public void GenerarPowerUp()
     {
+        
         GameObject powerUp = Instantiate(pUp, transform.position, transform.rotation);
         powerUp.GetComponent<PowerScript>().powerGenerator = this;
+        powerUp.GetComponent<PowerScript>().player = player;
+        powerUp.GetComponent<PowerScript>().tipoPower = true;
         powerUp.layer = 3;
+
+        
+
     }
 
     public void GenerarPowerDown()
     {
         GameObject powerDown = Instantiate(pDown, transform.position, transform.rotation);
         powerDown.GetComponent<PowerScript>().powerGenerator = this;
+        powerDown.GetComponent<PowerScript>().player = player;
+        powerDown.GetComponent<PowerScript>().tipoPower = true;
         powerDown.layer = 3;
     }
 

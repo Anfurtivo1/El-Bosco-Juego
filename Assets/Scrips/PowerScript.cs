@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class PowerScript : MonoBehaviour
 {
+    System.Random rnd = new System.Random();
+
     [HideInInspector]
     public PowerGenerator powerGenerator;
+    public GameObject player;
+    [HideInInspector]
+    public bool tipoPower; //True es Up, false es Down
 
     // Update is called once per frame
     void Update()
@@ -29,6 +34,17 @@ public class PowerScript : MonoBehaviour
                 //hit.collider.gameObject
                 //Hit something, print the tag of the object
                 Debug.Log("Hitting: " + hit.collider.tag);
+
+                if (tipoPower == true)
+                {
+                    ElegirPowerup();
+                }
+
+                if (tipoPower == false)
+                {
+                    ElegirPowerDown();
+                }
+
                 powerGenerator.GenerateRandomWave();
                 Destroy(this.gameObject);
             }
@@ -46,5 +62,74 @@ public class PowerScript : MonoBehaviour
         }
 
     }
+
+    public void ElegirPowerup()
+    {
+        int power = rnd.Next(1, 2);
+
+        power = 2;
+
+        switch (power)
+        {
+            case 1:
+                //Ir mas rapido
+
+                break;
+            case 2:
+                //Saltar mas
+                player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto + 20;
+
+                break;
+            case 3:
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void ElegirPowerDown()
+    {
+        int power = rnd.Next(1, 2);
+
+        power = 2;
+
+        switch (power)
+        {
+            case 1:
+                //Ir mas lento
+
+                break;
+            case 2:
+                //Saltar menos
+                player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto - 5;
+
+                break;
+            case 3:
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void PowerUp1()
+    {
+        
+    }
+
+    public void PowerUp2()
+    {
+
+    }
+
+    public void PowerDown1()
+    {
+
+    }
+
+    public void PowerDown2()
+    {
+
+    }
+
 
 }

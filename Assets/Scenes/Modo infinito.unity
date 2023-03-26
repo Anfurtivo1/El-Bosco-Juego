@@ -377,6 +377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerGenerator: {fileID: 0}
+  player: {fileID: 2029766854}
+  tipoPower: 0
 --- !u!212 &259829194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -673,6 +675,7 @@ MonoBehaviour:
   pUp: {fileID: 259829192}
   maxSpeed: 15
   currentSpeed: 5
+  player: {fileID: 2029766854}
   SpeedMultiplier: 0.001
 --- !u!224 &868864229 stripped
 RectTransform:
@@ -1302,6 +1305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerGenerator: {fileID: 0}
+  player: {fileID: 2029766854}
+  tipoPower: 0
 --- !u!212 &1617729451
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2073,6 +2078,7 @@ MonoBehaviour:
   pUp: {fileID: 259829192}
   maxSpeed: 0
   currentSpeed: 2
+  player: {fileID: 0}
   SpeedMultiplier: 0.1
 --- !u!1 &2029766854
 GameObject:

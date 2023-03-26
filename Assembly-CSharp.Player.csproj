@@ -61,6 +61,8 @@
     <Compile Include="Assets\Scrips\SpikeGenerator.cs" />
     <Compile Include="Assets\Scrips\Enemigo 1.cs" />
     <Compile Include="Assets\Scrips\Enemigo 4.cs" />
+    <Compile Include="Assets\Scrips\PowerGenerator.cs" />
+    <Compile Include="Assets\Scrips\PowerScript.cs" />
     <Compile Include="Assets\Scrips\Enemigo 3.cs" />
     <Compile Include="Assets\Scrips\ProgressBar.cs" />
     <Compile Include="Assets\Scrips\SpikeScript.cs" />
