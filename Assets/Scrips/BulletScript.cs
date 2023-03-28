@@ -11,26 +11,27 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Length of the ray
+        float laserLength = 1f;
+        //Obtain the layerMask of the layer
+        int layerMask = LayerMask.GetMask("Default");
+
+        //Get the first object hit by the ray
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.up, laserLength, layerMask);
+
         transform.Translate(Vector2.up * bulletGenerator.currentSpeed * Time.deltaTime);
 
         if (bulletGenerator != null)
         {
-            //Length of the ray
-            float laserLength = 1f;
-            //Obtain the layerMask of the layer
-            int layerMask = LayerMask.GetMask("Default");
 
-            //Get the first object hit by the ray
-            RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.up, laserLength, layerMask);
-
-            //If the collider of the object hit is not NUll
-            if (hit.collider != null)
-            {
-                //Hit something, print the tag of the object
-                //Debug.Log("detected: " + hit.collider.tag);
-                //this.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Impulse);
-                //spike.GetComponent<Rigidbody2D>().AddForce(Vector2.up*10000000);
-            }
+            ////If the collider of the object hit is not NUll
+            //if (hit.collider != null)
+            //{
+            //    //Hit something, print the tag of the object
+            //    //Debug.Log("detected: " + hit.collider.tag);
+            //    //this.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Impulse);
+            //    //spike.GetComponent<Rigidbody2D>().AddForce(Vector2.up*10000000);
+            //}
 
             if (hit.collider.tag.Equals("Roof"))
             {
@@ -45,13 +46,10 @@ public class BulletScript : MonoBehaviour
             Debug.DrawRay(transform.position, Vector2.up * laserLength, Color.green);
         }
 
-        if (bulletGenerator == null)
+        if (bulletGenerator == null && hit.collider != null)
         {
-            Destroy(this.gameObject,5f);
+            Destroy(this.gameObject, 2f);
         }
-        
-
-
     }
 
     //void OnTriggerEnter2D(Collider2D col)

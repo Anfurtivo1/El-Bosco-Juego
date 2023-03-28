@@ -57,7 +57,7 @@ public class SpikeScript : MonoBehaviour
 
         if (col.gameObject.CompareTag("finishLine"))
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,0.5f);
         }
 
     }

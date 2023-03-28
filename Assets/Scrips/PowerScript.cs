@@ -8,6 +8,8 @@ public class PowerScript : MonoBehaviour
 
     [HideInInspector]
     public PowerGenerator powerGenerator;
+    [HideInInspector]
+    public float timerMuerte = 8;
     public GameObject player;
     [HideInInspector]
     public bool tipoPower; //True es Up, false es Down
@@ -15,6 +17,15 @@ public class PowerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timerMuerte -= Time.deltaTime;
+
+        if (timerMuerte <= 0f)
+        {
+            timerMuerte = 8f;
+            powerGenerator.GenerateRandomWave();
+            Destroy(this.gameObject);
+        }
+
         if (powerGenerator != null)
         {
             transform.Translate(Vector2.left * powerGenerator.currentSpeed * Time.deltaTime);
@@ -27,36 +38,44 @@ public class PowerScript : MonoBehaviour
             //Get the first object hit by the ray
             RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.left, laserLength, layerMask);
 
+            //Get the first object hit by the ray
+            RaycastHit2D hit2 = Physics2D.Raycast(this.transform.position, Vector2.up, laserLength, layerMask);
+
+            //Get the first object hit by the ray
+            RaycastHit2D hit3 = Physics2D.Raycast(this.transform.position, Vector2.down, laserLength, layerMask);
+
             Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.grey);
+            Debug.DrawRay(transform.position, Vector2.up * laserLength, Color.grey);
+            Debug.DrawRay(transform.position, Vector2.down * laserLength, Color.grey);
 
-            if (hit.collider.tag.Equals("Player"))
-            {
-                //hit.collider.gameObject
-                //Hit something, print the tag of the object
-                Debug.Log("Hitting: " + hit.collider.tag);
+            //if (hit.collider.tag.Equals("Player") || hit2.collider.tag.Equals("Player") || hit3.collider.tag.Equals("Player"))
+            //{
+            //    //hit.collider.gameObject
+            //    //Hit something, print the tag of the object
+            //    //Debug.Log("Hitting: " + hit.collider.tag);
 
-                if (tipoPower == true)
-                {
-                    ElegirPowerup();
-                }
+            //    if (tipoPower == true)
+            //    {
+            //        ElegirPowerup();
+            //    }
 
-                if (tipoPower == false)
-                {
-                    ElegirPowerDown();
-                }
+            //    if (tipoPower == false)
+            //    {
+            //        ElegirPowerDown();
+            //    }
 
-                powerGenerator.GenerateRandomWave();
-                Destroy(this.gameObject);
-            }
+            //    powerGenerator.GenerateRandomWave();
+            //    Destroy(this.gameObject);
+            //}
 
-            if (hit.collider.tag.Equals("finishLine"))
-            {
-                //hit.collider.gameObject
-                //Hit something, print the tag of the object
-                Debug.Log("Hitting: " + hit.collider.tag);
-                powerGenerator.GenerateRandomWave();
-                Destroy(this.gameObject);
-            }
+            //if (hit.collider.tag.Equals("finishLine") || hit2.collider.tag.Equals("finishLine") || hit3.collider.tag.Equals("finishLine"))
+            //{
+            //    //hit.collider.gameObject
+            //    //Hit something, print the tag of the object
+            //    Debug.Log("Hitting: " + hit.collider.tag);
+            //    powerGenerator.GenerateRandomWave();
+            //    Destroy(this.gameObject);
+            //}
 
 
         }
@@ -109,6 +128,34 @@ public class PowerScript : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+
+        if (col.gameObject.CompareTag("Player"))
+        {
+            if (tipoPower == true)
+            {
+                ElegirPowerup();
+                powerGenerator.GenerateRandomWave();
+                Destroy(this.gameObject);
+            }
+
+            if (tipoPower == false)
+            {
+                ElegirPowerDown();
+                powerGenerator.GenerateRandomWave();
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (col.gameObject.CompareTag("finishLine"))
+        {
+            powerGenerator.GenerateRandomWave();
+            Destroy(this.gameObject);
+        }
+
     }
 
     public void PowerUp1()

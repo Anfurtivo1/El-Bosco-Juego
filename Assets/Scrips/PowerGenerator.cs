@@ -37,7 +37,7 @@ public class PowerGenerator : MonoBehaviour
         powerUp.GetComponent<PowerScript>().powerGenerator = this;
         powerUp.GetComponent<PowerScript>().player = player;
         powerUp.GetComponent<PowerScript>().tipoPower = true;
-        powerUp.layer = 3;
+        powerUp.layer = 0;
 
         
 
@@ -49,7 +49,7 @@ public class PowerGenerator : MonoBehaviour
         powerDown.GetComponent<PowerScript>().powerGenerator = this;
         powerDown.GetComponent<PowerScript>().player = player;
         powerDown.GetComponent<PowerScript>().tipoPower = true;
-        powerDown.layer = 3;
+        powerDown.layer = 0;
     }
 
     public void GenerateRandomWave()
