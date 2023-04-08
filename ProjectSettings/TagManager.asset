@@ -10,6 +10,7 @@ TagManager:
   - finishLine
   - Roof
   - Bullet
+  - roof
   layers:
   - Default
   - TransparentFX

@@ -32,24 +32,32 @@ public class BulletScript : MonoBehaviour
             //    //this.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Impulse);
             //    //spike.GetComponent<Rigidbody2D>().AddForce(Vector2.up*10000000);
             //}
-
-            if (hit.collider.tag.Equals("Roof"))
+            if (hit.collider != null)
             {
-                //hit.collider.gameObject
-                //Hit something, print the tag of the object
-                //Debug.Log("Hitting: " + hit.collider.tag);
-                bulletGenerator.generateRandomWave();
-                Destroy(this.gameObject);
+                if (hit.collider.CompareTag("Roof"))
+                {
+                    //hit.collider.gameObject
+                    //Hit something, print the tag of the object
+                    //Debug.Log("Hitting: " + hit.collider.tag);
+                    bulletGenerator.generateRandomWave();
+                    Destroy(this.gameObject);
+                }
+            }
+
+            if (bulletGenerator == null)
+            {
+                Destroy(this.gameObject, 4f);
             }
 
             //Method to draw the ray in scene for debug purpose
             Debug.DrawRay(transform.position, Vector2.up * laserLength, Color.green);
         }
 
-        if (bulletGenerator == null && hit.collider != null)
+        if (bulletGenerator == null)
         {
-            Destroy(this.gameObject, 2f);
+            Destroy(this.gameObject, 4f);
         }
+
     }
 
     //void OnTriggerEnter2D(Collider2D col)

@@ -26,6 +26,8 @@ public class PlayerScript : MonoBehaviour
     public Text textoVidas;
     RaycastHit hit;
 
+    public string botonSalto;
+
     private IEnumerator BecomeTemporarilyInvincible()
     {
         //Debug.Log("Player turned invincible!");
@@ -59,7 +61,19 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.DeleteKey("salto");
+        PlayerPrefs.Save();
+        if (PlayerPrefs.GetString("salto") == "")
+        {
+            PlayerPrefs.SetString("salto", KeyCode.F.ToString());
+            PlayerPrefs.Save();
+            
+        }
+
         textoVidas.text = "" + vidas;
+        botonSalto = PlayerPrefs.GetString("salto");
+        Debug.Log("El boton para saltar es: " + PlayerPrefs.GetString("salto"));
+
     }
     // Update is called once per frame
     void Update()
@@ -101,7 +115,12 @@ public class PlayerScript : MonoBehaviour
         }
 
         //comprobarBloque();
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+    }
+
+    void OnGUI()
+    {
+        if (Event.current.Equals(Event.KeyboardEvent(botonSalto)))
         {
             cuentaSaltos++;
             if (tocandoTierra && saltoDoble)
