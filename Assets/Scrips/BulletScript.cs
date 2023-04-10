@@ -34,7 +34,7 @@ public class BulletScript : MonoBehaviour
             //}
             if (hit.collider != null)
             {
-                if (hit.collider.CompareTag("Roof"))
+                if (hit.collider.CompareTag("roof"))
                 {
                     //hit.collider.gameObject
                     //Hit something, print the tag of the object

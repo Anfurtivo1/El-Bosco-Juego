@@ -58,7 +58,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scrips\BulletGenerator.cs" />
     <Compile Include="Assets\Scrips\SpikeGenerator.cs" />
+    <Compile Include="Assets\Scrips\EnemigoManager.cs" />
     <Compile Include="Assets\Scrips\PauseManager.cs" />
+    <Compile Include="Assets\Scrips\Enemigos.cs" />
     <Compile Include="Assets\Scrips\PowerGenerator.cs" />
     <Compile Include="Assets\Scrips\PowerScript.cs" />
     <Compile Include="Assets\Scrips\ProgressBar.cs" />
@@ -66,8 +68,6 @@
     <Compile Include="Assets\Scrips\PlayerScript.cs" />
     <Compile Include="Assets\Scrips\BulletScript.cs" />
     <Compile Include="Assets\Scrips\MenuPrincipal.cs" />
-    <Compile Include="Assets\Scrips\EnemigoManager.cs" />
-    <Compile Include="Assets\Scrips\Enemigos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
