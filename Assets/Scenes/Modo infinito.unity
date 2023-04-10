@@ -2982,7 +2982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6066721403eb8834ea24290b0f2796d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemigo: {fileID: 4075523829379710546, guid: 77ba5920e8d337943a01ad448f5ce390, type: 3}
+  enemigo: {fileID: 5173054880342424633, guid: 560666f6f9cfa5648bd82964ae4c37f0, type: 3}
   minSpeed: 7
   maxSpeed: 25
   currentSpeed: 7
@@ -3295,7 +3295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6066721403eb8834ea24290b0f2796d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemigo: {fileID: 4075523829379710546, guid: 7170b1df398022749b864fa00384cc24, type: 3}
+  enemigo: {fileID: 3335727008923494254, guid: 8eb068d490ff4b74b9748be1a952f042, type: 3}
   minSpeed: 7
   maxSpeed: 25
   currentSpeed: 7
@@ -3601,6 +3601,7 @@ GameObject:
   - component: {fileID: 2029766856}
   - component: {fileID: 2029766860}
   - component: {fileID: 2029766861}
+  - component: {fileID: 2029766862}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3745,7 +3746,27 @@ MonoBehaviour:
   model: {fileID: 0}
   damage: 5
   textoVidas: {fileID: 1944674441}
+  proyectil: {fileID: 0}
+  proyectilGenerator: {fileID: 2029766862}
   botonSalto: 
+  botonDisparo: 
+--- !u!114 &2029766862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029766854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ba2728a0538934880592baa8c53ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proyectil: {fileID: 5862177555951380130, guid: 1458f9e1769242149ac052afde4a0fd8, type: 3}
+  minSpeed: 10
+  maxSpeed: 25
+  currentSpeed: 10
+  SpeedMultiplier: 0
 --- !u!1 &2060546377
 GameObject:
   m_ObjectHideFlags: 0

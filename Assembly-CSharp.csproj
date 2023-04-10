@@ -68,6 +68,8 @@
     <Compile Include="Assets\Scrips\PlayerScript.cs" />
     <Compile Include="Assets\Scrips\BulletScript.cs" />
     <Compile Include="Assets\Scrips\MenuPrincipal.cs" />
+    <Compile Include="Assets\Scrips\ProyectilScript.cs" />
+    <Compile Include="Assets\Scrips\ProyectilGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

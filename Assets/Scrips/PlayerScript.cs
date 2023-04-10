@@ -25,8 +25,13 @@ public class PlayerScript : MonoBehaviour
     public int damage;
     public Text textoVidas;
     RaycastHit hit;
+    public GameObject proyectil;
+
+    [SerializeField]
+    public ProyectilGenerator proyectilGenerator;
 
     public string botonSalto;
+    public string botonDisparo;
 
     private IEnumerator BecomeTemporarilyInvincible()
     {
@@ -61,6 +66,9 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
+
+        
+
         PlayerPrefs.DeleteKey("salto");
         PlayerPrefs.Save();
         if (PlayerPrefs.GetString("salto") == "")
@@ -145,6 +153,9 @@ public class PlayerScript : MonoBehaviour
                 tocandoTierra = false;
             }
         }
+
+        Disparar();
+
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -204,6 +215,25 @@ public class PlayerScript : MonoBehaviour
         }
 
         StartCoroutine(BecomeTemporarilyInvincible());
+    }
+
+    private void Disparar()
+    {
+        PlayerPrefs.DeleteKey("disparar");
+        PlayerPrefs.Save();
+
+        PlayerPrefs.SetString("disparar", KeyCode.D.ToString());
+        PlayerPrefs.Save();
+
+        botonDisparo = PlayerPrefs.GetString("disparar");
+
+        if (Event.current.Equals(Event.KeyboardEvent(botonDisparo)))
+            {
+                proyectilGenerator.generateProyectil();
+            }
+
+        Debug.Log("El boton para disparar es: " + PlayerPrefs.GetString("disparar"));
+
     }
 
     //private void comprobarBloque()

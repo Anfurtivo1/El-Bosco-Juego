@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public class ProyectilScript : MonoBehaviour
 {
     [HideInInspector]
-    public BulletGenerator bulletGenerator;
-    public GameObject bullet;
+    public ProyectilGenerator proyectilGenerator;
+    public GameObject proyectil;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,12 +23,9 @@ public class BulletScript : MonoBehaviour
         int layerMask = LayerMask.GetMask("Default");
 
         //Get the first object hit by the ray
-        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.up, laserLength, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.right, laserLength, layerMask);
 
-        transform.Translate(Vector2.up * bulletGenerator.currentSpeed * Time.deltaTime);
-
-        if (bulletGenerator != null)
-        {
+        transform.Translate(Vector2.right * proyectilGenerator.currentSpeed * Time.deltaTime);
 
             ////If the collider of the object hit is not NUll
             //if (hit.collider != null)
@@ -34,38 +37,19 @@ public class BulletScript : MonoBehaviour
             //}
             if (hit.collider != null)
             {
-                if (hit.collider.CompareTag("roof"))
+                if (hit.collider.CompareTag("Spike"))
                 {
                     //hit.collider.gameObject
                     //Hit something, print the tag of the object
                     //Debug.Log("Hitting: " + hit.collider.tag);
-                    bulletGenerator.generateRandomWave();
+                    //proyectilGenerator.generateWave();
                     Destroy(this.gameObject);
                 }
             }
 
             //Method to draw the ray in scene for debug purpose
-            Debug.DrawRay(transform.position, Vector2.up * laserLength, Color.green);
-        }
+            Debug.DrawRay(transform.position, Vector2.right * laserLength, Color.yellow);
 
-        if (bulletGenerator == null)
-        {
-            Destroy(this.gameObject, 4f);
-        }
-
+        Destroy(this.gameObject, 4f);
     }
-
-    //void OnTriggerEnter2D(Collider2D col)
-    //{
-    //    if (col.gameObject.CompareTag("finishLine"))
-    //    {
-    //        bulletGenerator.generateRandomWave();
-    //    }
-
-    //    if (col.gameObject.CompareTag("finishLine"))
-    //    {
-    //        Destroy(this.gameObject);
-    //    }
-
-    //}
 }
