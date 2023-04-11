@@ -11,12 +11,12 @@ public class PowerScript : MonoBehaviour
     [HideInInspector]
     public float timerMuerte = 8;
     public GameObject player;
-    [HideInInspector]
     public bool tipoPower; //True es Up, false es Down
 
     // Update is called once per frame
     void Update()
     {
+
         timerMuerte -= Time.deltaTime;
 
         if (timerMuerte <= 0f)
@@ -97,6 +97,8 @@ public class PowerScript : MonoBehaviour
             case 2:
                 //Saltar mas
                 player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto + 20;
+                //StartCoroutine("PowerUp1");
+
 
                 break;
             case 3:
@@ -120,7 +122,9 @@ public class PowerScript : MonoBehaviour
                 break;
             case 2:
                 //Saltar menos
-                player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto - 5;
+                player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto - 10;
+                //StartCoroutine("PowerDown1");
+                
 
                 break;
             case 3:
@@ -139,6 +143,7 @@ public class PowerScript : MonoBehaviour
             {
                 ElegirPowerup();
                 powerGenerator.GenerateRandomWave();
+                powerGenerator.TiempoUsoPower();
                 Destroy(this.gameObject);
             }
 
@@ -146,6 +151,7 @@ public class PowerScript : MonoBehaviour
             {
                 ElegirPowerDown();
                 powerGenerator.GenerateRandomWave();
+                powerGenerator.TiempoUsoPower();
                 Destroy(this.gameObject);
             }
         }
@@ -170,7 +176,7 @@ public class PowerScript : MonoBehaviour
 
     public void PowerDown1()
     {
-
+        
     }
 
     public void PowerDown2()

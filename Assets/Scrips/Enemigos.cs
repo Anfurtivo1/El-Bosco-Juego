@@ -70,6 +70,16 @@ public class Enemigos : MonoBehaviour
             //Debug.Log("detected: " + hit.collider.tag);
             //this.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Impulse);
             //spike.GetComponent<Rigidbody2D>().AddForce(Vector2.up*10000000);
+
+            if (hit.collider.CompareTag("proyectil"))
+            {
+                //hit.collider.gameObject
+                //Hit something, print the tag of the object
+                //Debug.Log("Hitting: " + hit.collider.tag);
+                //proyectilGenerator.generateWave();
+                Destroy(this.gameObject);
+            }
+
         }
 
         //if (hit.collider.tag.Equals("Enemigo 5"))
@@ -106,6 +116,16 @@ public class Enemigos : MonoBehaviour
             //Hit something, print the tag of the object
             Debug.Log("detected: " + hit.collider.tag);
             this.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 15, ForceMode2D.Impulse);
+
+            if (hit.collider.CompareTag("proyectil"))
+            {
+                //hit.collider.gameObject
+                //Hit something, print the tag of the object
+                //Debug.Log("Hitting: " + hit.collider.tag);
+                //proyectilGenerator.generateWave();
+                Destroy(this.gameObject);
+            }
+
         }
 
         //if (hit.collider.tag.Equals("Enemigo 5"))
@@ -131,6 +151,12 @@ public class Enemigos : MonoBehaviour
         if (col.gameObject.CompareTag("finishLine"))
         {
             Destroy(this.gameObject);
+        }
+
+        if (col.gameObject.CompareTag("proyectil"))
+        {
+            Destroy(this.gameObject);
+            Destroy(col.gameObject);
         }
 
         if (col.gameObject.CompareTag("roof"))

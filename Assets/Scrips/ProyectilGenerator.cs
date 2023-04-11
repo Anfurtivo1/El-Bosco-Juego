@@ -15,7 +15,7 @@ public class ProyectilGenerator : MonoBehaviour
     void Start()
     {
         currentSpeed = minSpeed;
-        generateProyectil();
+        //generateProyectil();
     }
 
     // Update is called once per frame

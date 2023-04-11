@@ -18,7 +18,7 @@ public class ProyectilScript : MonoBehaviour
     void Update()
     {
         //Length of the ray
-        float laserLength = 1f;
+        float laserLength = 3f;
         //Obtain the layerMask of the layer
         int layerMask = LayerMask.GetMask("Default");
 
@@ -50,6 +50,6 @@ public class ProyectilScript : MonoBehaviour
             //Method to draw the ray in scene for debug purpose
             Debug.DrawRay(transform.position, Vector2.right * laserLength, Color.yellow);
 
-        Destroy(this.gameObject, 4f);
+        Destroy(this.gameObject, 1.6f);
     }
 }

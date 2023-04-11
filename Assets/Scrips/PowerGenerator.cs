@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PowerGenerator : MonoBehaviour
 {
+
+    public float tiempoNormalidad = 0;
+
     public GameObject pDown;
     public GameObject pUp;
     public float maxSpeed;
@@ -28,6 +31,9 @@ public class PowerGenerator : MonoBehaviour
             currentSpeed += SpeedMultiplier;
         }
 
+        
+
+
     }
 
     public void GenerarPowerUp()
@@ -48,7 +54,7 @@ public class PowerGenerator : MonoBehaviour
         GameObject powerDown = Instantiate(pDown, transform.position, transform.rotation);
         powerDown.GetComponent<PowerScript>().powerGenerator = this;
         powerDown.GetComponent<PowerScript>().player = player;
-        powerDown.GetComponent<PowerScript>().tipoPower = true;
+        powerDown.GetComponent<PowerScript>().tipoPower = false;
         powerDown.layer = 0;
     }
 
@@ -68,5 +74,10 @@ public class PowerGenerator : MonoBehaviour
         }
     }
 
+    public IEnumerator TiempoUsoPower()
+    {
+        yield return new WaitForSeconds(3f);
+        player.GetComponent<PlayerScript>().potenciaSalto = 15;
+    }
 
 }
