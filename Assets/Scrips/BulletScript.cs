@@ -50,7 +50,7 @@ public class BulletScript : MonoBehaviour
 
         if (bulletGenerator == null)
         {
-            Destroy(this.gameObject, 4f);
+            Destroy(this.gameObject, 1.5f);
         }
 
     }

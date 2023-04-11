@@ -32,6 +32,7 @@ public class PlayerScript : MonoBehaviour
 
     public string botonSalto;
     public string botonDisparo;
+    public bool cdDisparo = true;
 
     private IEnumerator BecomeTemporarilyInvincible()
     {
@@ -228,12 +229,24 @@ public class PlayerScript : MonoBehaviour
         botonDisparo = PlayerPrefs.GetString("disparar");
 
         if (Event.current.Equals(Event.KeyboardEvent(botonDisparo)))
+        {
+            if (cdDisparo)
             {
+                cdDisparo = false;
                 proyectilGenerator.generateProyectil();
+                StartCoroutine(CoolDownDisparo());
             }
+        }
 
         Debug.Log("El boton para disparar es: " + PlayerPrefs.GetString("disparar"));
 
+    }
+
+    private IEnumerator CoolDownDisparo()
+    {
+        
+        yield return new WaitForSeconds(1.5f);
+        cdDisparo = true;
     }
 
     //private void comprobarBloque()
