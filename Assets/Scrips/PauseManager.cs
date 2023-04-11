@@ -18,7 +18,13 @@ public class PauseManager : MonoBehaviour
 
     public Button salto;
     [SerializeField]
-    public TextMeshProUGUI btnTexto;
+    public TextMeshProUGUI btnTextoSalto;
+    public GameObject fondoSalto;
+
+    public Button disparo;
+    [SerializeField]
+    public TextMeshProUGUI btnTextoDisparo;
+    public GameObject fondoDisparo;
 
     public Button atras;
     public Button salir;
@@ -84,20 +90,35 @@ public class PauseManager : MonoBehaviour
         resumen.gameObject.SetActive(false);
         Mprncipal.gameObject.SetActive(false);
         salir.gameObject.SetActive(false);
+        opciones.gameObject.SetActive(false);
 
-        opciones.gameObject.SetActive(true);
         salto.gameObject.SetActive(true);
+        disparo.gameObject.SetActive(true);
+        fondoSalto.gameObject.SetActive(true);
+        fondoDisparo.gameObject.SetActive(true);
         atras.gameObject.SetActive(true);
 
     }
 
     public void Salto()
     {
-        Debug.Log("Nombre actual del boton: "+ btnTexto.text);
+        Debug.Log("Nombre actual del boton: "+ btnTextoSalto.text);
 
-        btnTexto.text = "pulsa una tecla...";
+        btnTextoSalto.text = "pulsa una tecla...";
+        btnTextoSalto.fontSize = 50;
 
-        Debug.Log("Nombre nuevo del boton: " + btnTexto.text);
+        Debug.Log("Nombre nuevo del boton: " + btnTextoSalto.text);
+
+    }
+
+    public void Disparo()
+    {
+        Debug.Log("Nombre actual del boton: " + btnTextoDisparo.text);
+
+        btnTextoDisparo.text = "pulsa una tecla...";
+        btnTextoDisparo.fontSize = 50;
+
+        Debug.Log("Nombre nuevo del boton: " + btnTextoDisparo.text);
 
     }
 
@@ -105,7 +126,11 @@ public class PauseManager : MonoBehaviour
     {
         atras.gameObject.SetActive(false);
         salto.gameObject.SetActive(false);
+        disparo.gameObject.SetActive(false);
+        fondoSalto.gameObject.SetActive(false);
+        fondoDisparo.gameObject.SetActive(false);
 
+        opciones.gameObject.SetActive(true);
         resumen.gameObject.SetActive(true);
         Mprncipal.gameObject.SetActive(true);
         salir.gameObject.SetActive(true);
@@ -113,15 +138,15 @@ public class PauseManager : MonoBehaviour
 
     public void Mapear()
     {
-        if (btnTexto.text == "pulsa una tecla...")
+        if (btnTextoSalto.text == "pulsa una tecla...")
         {
             foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
             {
                 if (Input.GetKey(keyCode))
                 {
                     Debug.Log("Pulsado la tecla: "+ keyCode.ToString());
-                    btnTexto.text = keyCode.ToString();
-                    PlayerPrefs.SetString("salto", btnTexto.text);
+                    btnTextoSalto.text = keyCode.ToString();
+                    PlayerPrefs.SetString("salto", btnTextoSalto.text);
                     Debug.Log("El antiguo mapeado era: "+ player.GetComponent<PlayerScript>().botonSalto);
                     player.GetComponent<PlayerScript>().botonSalto = PlayerPrefs.GetString("salto");
                     PlayerPrefs.Save();
@@ -129,6 +154,24 @@ public class PauseManager : MonoBehaviour
                 }
             }
         }
+
+        if (btnTextoDisparo.text == "pulsa una tecla...")
+        {
+            foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
+            {
+                if (Input.GetKey(keyCode))
+                {
+                    Debug.Log("Pulsado la tecla: " + keyCode.ToString());
+                    btnTextoDisparo.text = keyCode.ToString();
+                    PlayerPrefs.SetString("disparar", btnTextoDisparo.text);
+                    Debug.Log("El antiguo mapeado era: " + player.GetComponent<PlayerScript>().botonDisparo);
+                    player.GetComponent<PlayerScript>().botonDisparo = PlayerPrefs.GetString("disparar");
+                    PlayerPrefs.Save();
+                    Debug.Log("El nuevo mapeado es " + player.GetComponent<PlayerScript>().botonDisparo);
+                }
+            }
+        }
+
     }
 
     public void Salir()

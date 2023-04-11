@@ -70,18 +70,18 @@ public class PlayerScript : MonoBehaviour
 
         
 
-        PlayerPrefs.DeleteKey("salto");
+        //PlayerPrefs.DeleteKey("salto");
         PlayerPrefs.Save();
         if (PlayerPrefs.GetString("salto") == "")
         {
-            PlayerPrefs.SetString("salto", KeyCode.F.ToString());
+            PlayerPrefs.SetString("salto", KeyCode.Space.ToString());
             PlayerPrefs.Save();
             
         }
 
         textoVidas.text = "" + vidas;
         botonSalto = PlayerPrefs.GetString("salto");
-        Debug.Log("El boton para saltar es: " + PlayerPrefs.GetString("salto"));
+        //Debug.Log("El boton para saltar es: " + PlayerPrefs.GetString("salto"));
 
     }
     // Update is called once per frame
@@ -220,25 +220,37 @@ public class PlayerScript : MonoBehaviour
 
     private void Disparar()
     {
-        PlayerPrefs.DeleteKey("disparar");
-        PlayerPrefs.Save();
-
-        PlayerPrefs.SetString("disparar", KeyCode.D.ToString());
-        PlayerPrefs.Save();
-
-        botonDisparo = PlayerPrefs.GetString("disparar");
-
-        if (Event.current.Equals(Event.KeyboardEvent(botonDisparo)))
+        if (PlayerPrefs.GetString("disparar") == "")
         {
-            if (cdDisparo)
-            {
-                cdDisparo = false;
-                proyectilGenerator.generateProyectil();
-                StartCoroutine(CoolDownDisparo());
-            }
+            PlayerPrefs.DeleteKey("disparar");
+            PlayerPrefs.Save();
+
+            PlayerPrefs.SetString("disparar", KeyCode.D.ToString());
+            PlayerPrefs.Save();
         }
 
-        Debug.Log("El boton para disparar es: " + PlayerPrefs.GetString("disparar"));
+        //PlayerPrefs.DeleteKey("disparar");
+        //PlayerPrefs.Save();
+
+        //PlayerPrefs.SetString("disparar", KeyCode.D.ToString());
+        //PlayerPrefs.Save();
+
+        botonDisparo = PlayerPrefs.GetString("disparar");
+        if (Time.timeScale == 1f)
+        {
+            if (Event.current.Equals(Event.KeyboardEvent(botonDisparo)))
+            {
+                if (cdDisparo)
+                {
+                    cdDisparo = false;
+                    proyectilGenerator.generateProyectil();
+                    StartCoroutine(CoolDownDisparo());
+                }
+            }
+        }
+        
+
+        //Debug.Log("El boton para disparar es: " + PlayerPrefs.GetString("disparar"));
 
     }
 
