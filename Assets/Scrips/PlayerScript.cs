@@ -32,7 +32,12 @@ public class PlayerScript : MonoBehaviour
 
     public string botonSalto;
     public string botonDisparo;
-    public bool cdDisparo = true;
+    public bool cdDisparo;
+
+    public float coolDownDisparo;
+
+    public Image progressBar;
+    float progreso2;
 
     private IEnumerator BecomeTemporarilyInvincible()
     {
@@ -87,11 +92,14 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (vivo)
         {
             score += Time.deltaTime * 4;
             
             texto.text = "Score : " + score.ToString("F");
+
+            //Disparando();
 
             ////Length of the ray
             //float laserLength = 5f;
@@ -238,13 +246,22 @@ public class PlayerScript : MonoBehaviour
         botonDisparo = PlayerPrefs.GetString("disparar");
         if (Time.timeScale == 1f)
         {
+            progressBar.fillAmount += 1f / coolDownDisparo * Time.deltaTime;
             if (Event.current.Equals(Event.KeyboardEvent(botonDisparo)))
             {
+                cdDisparo = true;
+                
                 if (cdDisparo)
                 {
-                    cdDisparo = false;
-                    proyectilGenerator.generateProyectil();
-                    StartCoroutine(CoolDownDisparo());
+                    if (progressBar.fillAmount >=1)
+                    {
+                        cdDisparo = false;
+                        progressBar.fillAmount = 0;
+                        proyectilGenerator.generateProyectil();
+                    }
+                    //StartCoroutine(BarraDisparo());
+
+
                 }
             }
         }
@@ -254,12 +271,56 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    private IEnumerator CoolDownDisparo()
+    private void Disparando()
     {
-        
-        yield return new WaitForSeconds(1.5f);
-        cdDisparo = true;
+
+        if (PlayerPrefs.GetString("disparar") == "")
+        {
+            PlayerPrefs.DeleteKey("disparar");
+            PlayerPrefs.Save();
+
+            PlayerPrefs.SetString("disparar", KeyCode.D.ToString());
+            PlayerPrefs.Save();
+        }
+        progressBar.fillAmount += 1 / coolDownDisparo * Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.F))
+        {
+            cdDisparo = true;
+
+            if (cdDisparo)
+            {
+                if (progressBar.fillAmount >= 1)
+                {
+                    cdDisparo = false;
+                    progressBar.fillAmount = 0;
+                    proyectilGenerator.generateProyectil();
+                }
+                //StartCoroutine(BarraDisparo());
+
+
+            }
+        }
     }
+
+    //private IEnumerator CoolDownDisparo()
+    //{
+        
+
+    //    yield return new WaitForSeconds(1.5f);
+    //    cdDisparo = true;
+    //}
+
+    //private IEnumerator BarraDisparo()
+    //{
+
+    //    yield return new WaitForSeconds(1.5f);
+
+    //    progreso2 = Time.deltaTime;
+    //    progreso2 = progreso2 / 2;
+    //    progressBar.fillAmount = progreso2 + progressBar.fillAmount;
+        
+    //}
 
     //private void comprobarBloque()
     //{

@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scrips\SpikeGenerator.cs" />
     <Compile Include="Assets\Scrips\EnemigoManager.cs" />
     <Compile Include="Assets\Scrips\PauseManager.cs" />
+    <Compile Include="Assets\Scrips\DisparoProgressBar.cs" />
     <Compile Include="Assets\Scrips\ProyectilGenerator.cs" />
     <Compile Include="Assets\Scrips\Enemigos.cs" />
     <Compile Include="Assets\Scrips\PowerGenerator.cs" />
