@@ -61,6 +61,7 @@ public class PowerGenerator : MonoBehaviour
     public void GenerateRandomWave()
     {
         float timeBetween = UnityEngine.Random.Range(5.2f, 8.2f);
+        Debug.Log("Tiempo de espera Power: "+timeBetween);
         int power = rnd.Next(1, 6);
 
         if (power <= 3)

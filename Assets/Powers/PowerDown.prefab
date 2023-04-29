@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerGenerator: {fileID: 0}
-  timerMuerte: 3.8617563
+  timerMuerte: 10
   player: {fileID: 0}
   tipoPower: 0
 --- !u!61 &3561041138612384726

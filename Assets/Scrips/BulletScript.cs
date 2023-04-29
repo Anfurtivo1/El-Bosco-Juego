@@ -17,9 +17,9 @@ public class BulletScript : MonoBehaviour
         int layerMask = LayerMask.GetMask("Default");
 
         //Get the first object hit by the ray
-        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.up, laserLength, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.left, laserLength, layerMask);
 
-        transform.Translate(Vector2.up * bulletGenerator.currentSpeed * Time.deltaTime);
+        transform.Translate(Vector2.left * bulletGenerator.currentSpeed * Time.deltaTime);
 
         if (bulletGenerator != null)
         {

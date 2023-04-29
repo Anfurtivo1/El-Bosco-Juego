@@ -1,8 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-public class BackgroundScroller : MonoBehaviour
+
+public class FloorScroller : MonoBehaviour
 {
-    [Range(-5f, 5f)]
+    [Range(-10f, 10f)]
     public float Speed;
 
     private float offset;
@@ -27,10 +29,9 @@ public class BackgroundScroller : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Speed = Speed + 0.001f;
-        if (Speed > 5f)
+        if (Speed > 10f)
         {
-            Speed = 5f;
+            Speed = 10f;
         }
     }
-
 }

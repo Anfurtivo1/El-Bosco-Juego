@@ -114,7 +114,7 @@ public class Enemigos : MonoBehaviour
         if (hit.collider != null)
         {
             //Hit something, print the tag of the object
-            Debug.Log("detected: " + hit.collider.tag);
+            //Debug.Log("detected: " + hit.collider.tag);
             this.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 15, ForceMode2D.Impulse);
 
             if (hit.collider.CompareTag("proyectil"))
