@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +13,7 @@ public class PlayerScript : MonoBehaviour
     public bool saltoDoble;
     public int potenciaSalto;
     public float score;
-    bool vivo = true;
+    bool vivo;
     public Text texto;
     public int vidas;
     //private bool isInvincible = false;
@@ -38,6 +39,11 @@ public class PlayerScript : MonoBehaviour
 
     public Image progressBar;
     float progreso2;
+
+    public GameObject textoMenuMuerte;
+    public Button recargarNivel;
+    public Button cargarMenuPrincipalMenuMuerte;
+    public Button btnPausa;
 
     //private IEnumerator BecomeTemporarilyInvincible()
     //{
@@ -102,6 +108,10 @@ public class PlayerScript : MonoBehaviour
 
         if (vidas == 0)
         {
+            textoMenuMuerte.SetActive(true);
+            recargarNivel.gameObject.SetActive(true);
+            cargarMenuPrincipalMenuMuerte.gameObject.SetActive(true);
+            btnPausa.gameObject.SetActive(false);
             Time.timeScale = 0;
         }
         
@@ -148,27 +158,21 @@ public class PlayerScript : MonoBehaviour
             //jugador.drag = 20;
         }
 
-        if (col.contactCount != 0)
+        if (col.gameObject.tag == "Bullet")
         {
-            foreach (var objeto in col.contacts)
-            {
-                if (objeto.collider.gameObject.tag == "Spike")
-                {
-                    Destroy(objeto.collider.gameObject);
-                    perderVida(damage);
-
-                }
-
-                if (objeto.collider.gameObject.tag == "Bullet")
-                {
-                    Destroy(objeto.collider.gameObject);
-                    perderVida(damage);
-
-                }
-
-            }
+            perderVida(damage);
+            Destroy(col.gameObject);
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Spike")
+        {
+            perderVida(damage);
+            Destroy(collision.gameObject);
+        }
     }
 
     //private void ScaleModelTo(Vector3 scale)

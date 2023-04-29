@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3494634872471995293}
   - component: {fileID: 2374544205068411646}
   - component: {fileID: 8097761187267609582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemigo3
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.013219178, y: 0.100907266}
@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5368551468872372243, guid: 8ca0bd4ea4594d947bd86d49af03df57, type: 3}
-  minSpeed: 10
-  maxSpeed: 25
+  minSpeed: 20
+  maxSpeed: 40
   currentSpeed: 10
   SpeedMultiplier: 0
 --- !u!114 &2374544205068411646

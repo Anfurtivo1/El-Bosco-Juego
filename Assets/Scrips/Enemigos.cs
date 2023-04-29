@@ -10,9 +10,17 @@ public class Enemigos : MonoBehaviour
     public GameObject enemigo;
     public Rigidbody2D cuerpo;
 
+    [HideInInspector]
+    Collider2D collider;
+
+
+    [HideInInspector]
+    SpriteRenderer imagen;
+
     // Update is called once per frame
     void Update()
     {
+        
         switch (tipo)
         {
             case 1:
@@ -39,12 +47,93 @@ public class Enemigos : MonoBehaviour
 
     public void Enemigo1()
     {
+        if (enemigoManager != null)
+        {
+            transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
+        }
 
+
+        //Length of the ray
+        float laserLength = 10f;
+        //Obtain the layerMask of the layer
+        int layerMask = LayerMask.GetMask("Default");
+
+        //Get the first object hit by the ray
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.left, laserLength, layerMask);
+
+        //If the collider of the object hit is not NUll
+        if (hit.collider != null)
+        {
+            //Hit something, print the tag of the object
+            //Debug.Log("detected: " + hit.collider.tag);
+            //this.GetComponent<Rigidbody2D>().AddForce(Vector2.up, ForceMode2D.Impulse);
+            //spike.GetComponent<Rigidbody2D>().AddForce(Vector2.up*10000000);
+
+            if (hit.collider.CompareTag("proyectil"))
+            {
+                //hit.collider.gameObject
+                //Hit something, print the tag of the object
+                //Debug.Log("Hitting: " + hit.collider.tag);
+                //proyectilGenerator.generateWave();
+                Destroy(this.gameObject);
+            }
+
+        }
+
+        //if (hit.collider.tag.Equals("Enemigo 5"))
+        //{
+        //    //hit.collider.gameObject
+        //    //Hit something, print the tag of the object
+        //    Debug.Log("Hitting: " + hit.collider.tag);
+        //}
+
+        //Method to draw the ray in scene for debug purpose
+        Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.blue);
     }
 
     public void Enemigo2()
     {
+        
+        if (enemigoManager != null)
+        {
+            transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
+        }
 
+
+        //Length of the ray
+        float laserLength = 1f;
+        //Obtain the layerMask of the layer
+        int layerMask = LayerMask.GetMask("Default");
+
+        //Get the first object hit by the ray
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.left, laserLength, layerMask);
+
+        //If the collider of the object hit is not NUll
+        if (hit.collider != null)
+        {
+
+            if (hit.collider.CompareTag("finishLine"))
+            {
+                enemigoManager.generateRandomWaveEnemigo2();
+                Destroy(this.gameObject);
+            }
+
+            if (hit.collider.CompareTag("proyectil"))
+            {
+                Destroy(this.gameObject);
+                Destroy(hit.collider.gameObject);
+            }
+
+            //if (hit.collider.CompareTag("Player"))
+            //{
+            //    enemigoManager.generateRandomWave();
+            //    Destroy(this.gameObject);
+            //}
+
+        }
+
+        //Method to draw the ray in scene for debug purpose
+        Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.blue);
     }
 
     public void Enemigo3()
@@ -79,6 +168,8 @@ public class Enemigos : MonoBehaviour
                 //proyectilGenerator.generateWave();
                 Destroy(this.gameObject);
             }
+
+            
 
         }
 
@@ -143,9 +234,21 @@ public class Enemigos : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.CompareTag("Spike"))
+        {
+            //Physics2D.IgnoreLayerCollision(col.GetComponent<Collider2D>(), this.GetComponent<Collider2D>(),true);
+        }
         if (col.gameObject.CompareTag("nextLine"))
         {
-            enemigoManager.generateRandomWave();
+            if (tipo == 2)
+            {
+                enemigoManager.generateRandomWaveEnemigo2();
+            }
+
+            else
+            {
+                enemigoManager.generateRandomWave();
+            }
         }
 
         if (col.gameObject.CompareTag("finishLine"))
@@ -162,6 +265,30 @@ public class Enemigos : MonoBehaviour
         if (col.gameObject.CompareTag("roof"))
         {
             Destroy(this.gameObject);
+        }
+
+        if (col.gameObject.CompareTag("Player"))
+        {
+            //collider = this.gameObject.GetComponent<Collider2D>();
+
+            //imagen = this.gameObject.GetComponent<SpriteRenderer>();
+
+            //collider.enabled = false;
+
+            //imagen.enabled = false;
+
+            Destroy(this.gameObject);
+            if (tipo == 2)
+            {
+                enemigoManager.generateRandomWaveEnemigo2();
+            }
+
+            else
+            {
+                enemigoManager.generateRandomWave();
+            }
+
+            
         }
 
     }

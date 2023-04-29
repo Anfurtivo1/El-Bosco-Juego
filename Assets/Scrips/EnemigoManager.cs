@@ -39,7 +39,13 @@ public class EnemigoManager : MonoBehaviour
 
     public void generateRandomWave()
     {
-        float timeBetween = Random.Range(0.01f, 4.2f);
+        float timeBetween = Random.Range(6f, 8f);
+        Invoke("generateEnemigo", timeBetween);
+    }
+
+    public void generateRandomWaveEnemigo2()
+    {
+        float timeBetween = Random.Range(10f, 20f);
         Invoke("generateEnemigo", timeBetween);
     }
 
