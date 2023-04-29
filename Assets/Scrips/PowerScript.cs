@@ -13,6 +13,13 @@ public class PowerScript : MonoBehaviour
     public GameObject player;
     public bool tipoPower; //True es Up, false es Down
 
+    [HideInInspector]
+    Collider2D collider;
+
+
+    [HideInInspector]
+    SpriteRenderer imagen;
+
     // Update is called once per frame
     void Update()
     {
@@ -96,12 +103,11 @@ public class PowerScript : MonoBehaviour
                 break;
             case 2:
                 //Saltar mas
-                player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto + 20;
+                StartCoroutine(TiempoUsoPowerSalto());
+                
                 //StartCoroutine("PowerUp1");
 
 
-                break;
-            case 3:
                 break;
             default:
                 break;
@@ -121,13 +127,12 @@ public class PowerScript : MonoBehaviour
 
                 break;
             case 2:
-                //Saltar menos
-                player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto - 10;
-                //StartCoroutine("PowerDown1");
-                
 
-                break;
-            case 3:
+                //Saltar menos
+                StartCoroutine(TiempoUsoPowerSaltoDown());
+                //StartCoroutine("PowerDown1");
+
+
                 break;
             default:
                 break;
@@ -143,25 +148,58 @@ public class PowerScript : MonoBehaviour
             {
                 ElegirPowerup();
                 powerGenerator.GenerateRandomWave();
-                powerGenerator.TiempoUsoPower();
-                Destroy(this.gameObject);
+                //powerGenerator.TiempoUsoPower();
+                
+                
             }
 
             if (tipoPower == false)
             {
                 ElegirPowerDown();
                 powerGenerator.GenerateRandomWave();
-                powerGenerator.TiempoUsoPower();
-                Destroy(this.gameObject);
+                //powerGenerator.TiempoUsoPower();
+                //Destroy(this.gameObject);
             }
         }
 
         if (col.gameObject.CompareTag("finishLine"))
         {
             powerGenerator.GenerateRandomWave();
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,5f);
         }
 
+    }
+
+    public IEnumerator TiempoUsoPowerSalto()
+    {
+        collider = this.GetComponent<Collider2D>();
+
+        imagen = this.GetComponent<SpriteRenderer>();
+
+        collider.enabled = false;
+
+        imagen.enabled = false;
+
+        player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto + 20;
+
+        yield return new WaitForSeconds(3f);
+        player.GetComponent<PlayerScript>().potenciaSalto = 15;
+    }
+
+    public IEnumerator TiempoUsoPowerSaltoDown()
+    {
+        collider = this.GetComponent<Collider2D>();
+
+        imagen = this.GetComponent<SpriteRenderer>();
+
+        collider.enabled = false;
+
+        imagen.enabled = false;
+
+        player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto - 20;
+
+        yield return new WaitForSeconds(3f);
+        player.GetComponent<PlayerScript>().potenciaSalto = 15;
     }
 
     public void PowerUp1()

@@ -74,10 +74,6 @@ public class PowerGenerator : MonoBehaviour
         }
     }
 
-    public IEnumerator TiempoUsoPower()
-    {
-        yield return new WaitForSeconds(3f);
-        player.GetComponent<PlayerScript>().potenciaSalto = 15;
-    }
+    
 
 }

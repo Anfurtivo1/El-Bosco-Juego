@@ -93,7 +93,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         
-        if (vivo)
+        if (vidas >0)
         {
             score += Time.deltaTime * 4;
             
@@ -129,6 +129,11 @@ public class PlayerScript : MonoBehaviour
 
 
 
+        }
+
+        if (vidas == 0)
+        {
+            Time.timeScale = 0;
         }
 
         //comprobarBloque();
@@ -223,7 +228,7 @@ public class PlayerScript : MonoBehaviour
 
         }
 
-        StartCoroutine(BecomeTemporarilyInvincible());
+        //StartCoroutine(BecomeTemporarilyInvincible());
     }
 
     private void Disparar()
