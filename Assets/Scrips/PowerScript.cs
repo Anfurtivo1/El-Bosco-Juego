@@ -8,22 +8,46 @@ public class PowerScript : MonoBehaviour
 
     [HideInInspector]
     public PowerGenerator powerGenerator;
-    [HideInInspector]
-    public float timerMuerte = 8;
+    public float timerMuerte;
     public GameObject player;
     public bool tipoPower; //True es Up, false es Down
+
+    [HideInInspector]
+    Collider2D collider;
+
+
+    [HideInInspector]
+    SpriteRenderer imagen;
+
+    bool PDownPillado = false;
+
+    float PDownCD = 0;
 
     // Update is called once per frame
     void Update()
     {
 
         timerMuerte -= Time.deltaTime;
+        Debug.Log("Timer muerte de Power " + tipoPower+ " : "+timerMuerte);
 
         if (timerMuerte <= 0f)
         {
-            timerMuerte = 8f;
+            timerMuerte = 10f;
             powerGenerator.GenerateRandomWave();
             Destroy(this.gameObject);
+        }
+
+        if (PDownPillado)
+        {
+            PDownCD += Time.deltaTime;
+            Debug.Log("CD de Power: " + PDownCD);
+            if (PDownCD >= 3)
+            {
+                Debug.Log("Ultimo CD de Power: " + PDownCD);
+                PDownPillado = false;
+                PDownCD = 0;
+                player.GetComponent<PlayerScript>().potenciaSalto = 20;
+            }
         }
 
         if (powerGenerator != null)
@@ -48,35 +72,6 @@ public class PowerScript : MonoBehaviour
             Debug.DrawRay(transform.position, Vector2.up * laserLength, Color.grey);
             Debug.DrawRay(transform.position, Vector2.down * laserLength, Color.grey);
 
-            //if (hit.collider.tag.Equals("Player") || hit2.collider.tag.Equals("Player") || hit3.collider.tag.Equals("Player"))
-            //{
-            //    //hit.collider.gameObject
-            //    //Hit something, print the tag of the object
-            //    //Debug.Log("Hitting: " + hit.collider.tag);
-
-            //    if (tipoPower == true)
-            //    {
-            //        ElegirPowerup();
-            //    }
-
-            //    if (tipoPower == false)
-            //    {
-            //        ElegirPowerDown();
-            //    }
-
-            //    powerGenerator.GenerateRandomWave();
-            //    Destroy(this.gameObject);
-            //}
-
-            //if (hit.collider.tag.Equals("finishLine") || hit2.collider.tag.Equals("finishLine") || hit3.collider.tag.Equals("finishLine"))
-            //{
-            //    //hit.collider.gameObject
-            //    //Hit something, print the tag of the object
-            //    Debug.Log("Hitting: " + hit.collider.tag);
-            //    powerGenerator.GenerateRandomWave();
-            //    Destroy(this.gameObject);
-            //}
-
 
         }
 
@@ -92,18 +87,18 @@ public class PowerScript : MonoBehaviour
         {
             case 1:
                 //Ir mas rapido
-
+                StartCoroutine(TiempoUsoPowerSalto());
                 break;
             case 2:
                 //Saltar mas
-                player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto + 20;
+                StartCoroutine(TiempoUsoPowerSalto());
+                
                 //StartCoroutine("PowerUp1");
 
 
                 break;
-            case 3:
-                break;
             default:
+                StartCoroutine(TiempoUsoPowerSalto());
                 break;
         }
     }
@@ -118,18 +113,18 @@ public class PowerScript : MonoBehaviour
         {
             case 1:
                 //Ir mas lento
-
+                StartCoroutine(TiempoUsoPowerSalto());
                 break;
             case 2:
+
                 //Saltar menos
-                player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto - 10;
+                TiempoUsoPowerSaltoDown();
                 //StartCoroutine("PowerDown1");
-                
+
 
                 break;
-            case 3:
-                break;
             default:
+                StartCoroutine(TiempoUsoPowerSalto());
                 break;
         }
     }
@@ -143,44 +138,47 @@ public class PowerScript : MonoBehaviour
             {
                 ElegirPowerup();
                 powerGenerator.GenerateRandomWave();
-                powerGenerator.TiempoUsoPower();
-                Destroy(this.gameObject);
             }
 
             if (tipoPower == false)
             {
                 ElegirPowerDown();
                 powerGenerator.GenerateRandomWave();
-                powerGenerator.TiempoUsoPower();
-                Destroy(this.gameObject);
             }
         }
 
-        if (col.gameObject.CompareTag("finishLine"))
-        {
-            powerGenerator.GenerateRandomWave();
-            Destroy(this.gameObject);
-        }
-
     }
 
-    public void PowerUp1()
+    public IEnumerator TiempoUsoPowerSalto()
     {
-        
+        collider = this.GetComponent<Collider2D>();
+
+        imagen = this.GetComponent<SpriteRenderer>();
+
+        collider.enabled = false;
+
+        imagen.enabled = false;
+
+        player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto + 20;
+
+        yield return new WaitForSeconds(3f);
+        player.GetComponent<PlayerScript>().potenciaSalto = 15;
+        powerGenerator.GenerateRandomWave();
     }
 
-    public void PowerUp2()
+    public void TiempoUsoPowerSaltoDown()
     {
+        collider = this.GetComponent<Collider2D>();
 
-    }
+        imagen = this.GetComponent<SpriteRenderer>();
 
-    public void PowerDown1()
-    {
-        
-    }
+        collider.enabled = false;
 
-    public void PowerDown2()
-    {
+        imagen.enabled = false;
+
+        PDownPillado = true;
+
+        player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto - 8;
 
     }
 

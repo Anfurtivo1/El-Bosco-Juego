@@ -72,12 +72,18 @@ public class PauseManager : MonoBehaviour
 
     public void CargarMenuPrincipal()
     {
-        if (SceneManager.GetActiveScene().ToString() == "Modo infinito")
+
+        var currentScene = SceneManager.GetActiveScene();
+        var currentSceneName = currentScene.name;
+
+        string nivelCargar = currentSceneName;
+
+        if (nivelCargar == "Modo infinito")
         {
             SceneManager.UnloadSceneAsync("Modo infinito");
         }
 
-        if (SceneManager.GetActiveScene().ToString() == "Modo historia")
+        if (nivelCargar == "Modo historia")
         {
             SceneManager.UnloadSceneAsync("Modo historia");
         }

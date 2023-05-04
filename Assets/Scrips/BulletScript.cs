@@ -17,9 +17,9 @@ public class BulletScript : MonoBehaviour
         int layerMask = LayerMask.GetMask("Default");
 
         //Get the first object hit by the ray
-        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.up, laserLength, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.left, laserLength, layerMask);
 
-        transform.Translate(Vector2.up * bulletGenerator.currentSpeed * Time.deltaTime);
+        transform.Translate(Vector2.left * bulletGenerator.currentSpeed * Time.deltaTime);
 
         if (bulletGenerator != null)
         {
@@ -34,24 +34,32 @@ public class BulletScript : MonoBehaviour
             //}
             if (hit.collider != null)
             {
-                if (hit.collider.CompareTag("roof"))
+                if (hit.collider.CompareTag("finishLine"))
                 {
                     //hit.collider.gameObject
                     //Hit something, print the tag of the object
                     //Debug.Log("Hitting: " + hit.collider.tag);
-                    bulletGenerator.generateRandomWave();
-                    Destroy(this.gameObject);
+                    StartCoroutine(Disparar());
                 }
             }
 
             //Method to draw the ray in scene for debug purpose
-            Debug.DrawRay(transform.position, Vector2.up * laserLength, Color.green);
+            Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.green);
         }
 
         if (bulletGenerator == null)
         {
             Destroy(this.gameObject, 1.5f);
         }
+
+    }
+
+    private IEnumerator Disparar()
+    {
+
+        yield return new WaitForSeconds(0.3f);
+        bulletGenerator.generateRandomWave();
+        Destroy(this.gameObject);
 
     }
 

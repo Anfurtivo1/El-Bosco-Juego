@@ -24,7 +24,8 @@ public class MenuPrincipal : MonoBehaviour
 
     public void CargarEscena2()
     {
-        SceneManager.LoadScene("Modo historia");
+        SceneManager.LoadScene("Selector Nivel");
+        
     }
 
 }
