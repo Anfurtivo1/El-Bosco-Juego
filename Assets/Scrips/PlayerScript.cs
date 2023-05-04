@@ -45,6 +45,12 @@ public class PlayerScript : MonoBehaviour
     public Button cargarMenuPrincipalMenuMuerte;
     public Button btnPausa;
 
+    public AudioClip recibirDaño;
+    public AudioClip disparar;
+    public AudioClip saltar;
+
+    public AudioSource src;
+
     //private IEnumerator BecomeTemporarilyInvincible()
     //{
     //    //Debug.Log("Player turned invincible!");
@@ -113,6 +119,9 @@ public class PlayerScript : MonoBehaviour
             cargarMenuPrincipalMenuMuerte.gameObject.SetActive(true);
             btnPausa.gameObject.SetActive(false);
             Time.timeScale = 0;
+
+            
+
         }
         
     }
@@ -136,6 +145,8 @@ public class PlayerScript : MonoBehaviour
                 //jugador.drag = 4;
                 //tocandoTierra = true;
                 jugador.AddForce(Vector2.up * potenciaSalto, ForceMode2D.Impulse);
+                src.clip = saltar;
+                src.Play();
                 //jugador.AddForce(Vector2.up * potenciaSalto);
             }
 
@@ -193,11 +204,8 @@ public class PlayerScript : MonoBehaviour
             textoVidas.text = "" + vidas;
         }
 
-        if (vidas <= 0)
-        {
-            Time.timeScale = 0;
-
-        }
+        src.clip = recibirDaño;
+        src.Play();
 
         //StartCoroutine(BecomeTemporarilyInvincible());
     }
@@ -234,6 +242,8 @@ public class PlayerScript : MonoBehaviour
                         cdDisparo = false;
                         progressBar.fillAmount = 0;
                         proyectilGenerator.generateProyectil();
+                        src.clip = disparar;
+                        src.Play();
                     }
                     //StartCoroutine(BarraDisparo());
 

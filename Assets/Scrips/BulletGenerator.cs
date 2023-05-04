@@ -11,6 +11,12 @@ public class BulletGenerator : MonoBehaviour
 
     public float SpeedMultiplier;
 
+    public AudioSource src;
+
+    public AudioClip disparar;
+
+    public bool pDisparo = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +36,18 @@ public class BulletGenerator : MonoBehaviour
 
     public void generateSpike()
     {
-        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
-        newBullet.GetComponent<BulletScript>().bulletGenerator = this;
-        newBullet.GetComponent<BulletScript>().bullet = newBullet;
-        newBullet.layer = 3;
+        if (pDisparo)
+        {
+            GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
+            newBullet.GetComponent<BulletScript>().bulletGenerator = this;
+            newBullet.GetComponent<BulletScript>().bullet = newBullet;
+            newBullet.layer = 3;
+
+            src.clip = disparar;
+            src.Play();
+        }
+        
+
     }
 
     public void generateRandomWave()

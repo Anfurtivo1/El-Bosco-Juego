@@ -17,6 +17,12 @@ public class Enemigos : MonoBehaviour
     [HideInInspector]
     SpriteRenderer imagen;
 
+    public BulletGenerator bulletGenerator;
+
+    public AudioSource src;
+
+    public AudioClip morir;
+
     // Update is called once per frame
     void Update()
     {
@@ -258,8 +264,12 @@ public class Enemigos : MonoBehaviour
 
         if (col.gameObject.CompareTag("proyectil"))
         {
-            Destroy(this.gameObject);
-            Destroy(col.gameObject);
+            //src.clip = morir;
+            //src.Play();
+
+            //Destroy(this.gameObject,0.1f);
+            //Destroy(col.gameObject);
+            StartCoroutine(Morirse(col));
         }
 
         if (col.gameObject.CompareTag("roof"))
@@ -292,4 +302,29 @@ public class Enemigos : MonoBehaviour
         }
 
     }
+
+    public IEnumerator Morirse(Collider2D col)
+    {
+        collider = this.GetComponent<Collider2D>();
+
+        imagen = this.GetComponent<SpriteRenderer>();
+
+        collider.enabled = false;
+
+        imagen.enabled = false;
+
+        src.clip = morir;
+        src.Play();
+
+        if (tipo == 3)
+        {
+            bulletGenerator.GetComponent<BulletGenerator>().pDisparo = false;
+        }
+
+        Destroy(col.gameObject);
+        yield return new WaitForSeconds(1f);
+        Destroy(this.gameObject);
+
+    }
+
 }
