@@ -31,6 +31,8 @@ public class PauseManager : MonoBehaviour
 
     public GameObject player;
 
+    public Button controlesDefault;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +102,7 @@ public class PauseManager : MonoBehaviour
 
         salto.gameObject.SetActive(true);
         disparo.gameObject.SetActive(true);
+        controlesDefault.gameObject.SetActive(true);
         fondoSalto.gameObject.SetActive(true);
         fondoDisparo.gameObject.SetActive(true);
         atras.gameObject.SetActive(true);
@@ -128,11 +131,28 @@ public class PauseManager : MonoBehaviour
 
     }
 
+    public void ControlesDefault()
+    {
+        PlayerPrefs.DeleteKey("salto");
+        PlayerPrefs.DeleteKey("disparar");
+
+        PlayerPrefs.SetString("salto","Space");
+        PlayerPrefs.SetString("disparar", "D");
+
+        player.GetComponent<PlayerScript>().botonSalto = PlayerPrefs.GetString("salto");
+
+        player.GetComponent<PlayerScript>().botonDisparo = PlayerPrefs.GetString("disparar");
+
+        PlayerPrefs.Save();
+
+    }
+
     public void Atras()
     {
         atras.gameObject.SetActive(false);
         salto.gameObject.SetActive(false);
         disparo.gameObject.SetActive(false);
+        controlesDefault.gameObject.SetActive(false);
         fondoSalto.gameObject.SetActive(false);
         fondoDisparo.gameObject.SetActive(false);
 
