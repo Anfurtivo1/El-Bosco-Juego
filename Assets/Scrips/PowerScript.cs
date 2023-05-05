@@ -32,7 +32,7 @@ public class PowerScript : MonoBehaviour
     {
 
         timerMuerte -= Time.deltaTime;
-        Debug.Log("Timer muerte de Power " + tipoPower+ " : "+timerMuerte);
+        //Debug.Log("Timer muerte de Power " + tipoPower+ " : "+timerMuerte);
 
         if (timerMuerte <= 0f)
         {
@@ -41,49 +41,49 @@ public class PowerScript : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (PDownPillado)
-        {
-            PDownCD += Time.deltaTime;
-            Debug.Log("CD de Power: " + PDownCD);
-            if (PDownCD >= 3)
-            {
-                Debug.Log("Ultimo CD de Power: " + PDownCD);
-                PDownPillado = false;
-                PDownCD = 0;
-                player.GetComponent<PlayerScript>().potenciaSalto = 20;
-            }
-        }
+        //if (PDownPillado)
+        //{
+        //    PDownCD += Time.deltaTime;
+        //    Debug.Log("CD de Power: " + PDownCD);
+        //    if (PDownCD >= 3)
+        //    {
+        //        Debug.Log("Ultimo CD de Power: " + PDownCD);
+        //        PDownPillado = false;
+        //        PDownCD = 0;
+        //        player.GetComponent<PlayerScript>().potenciaSalto = 20;
+        //    }
+        //}
 
-        if (powerGenerator != null)
-        {
-            transform.Translate(Vector2.left * powerGenerator.currentSpeed * Time.deltaTime);
+        //if (powerGenerator != null)
+        //{
+        transform.Translate(Vector2.left * powerGenerator.currentSpeed * Time.deltaTime);
 
-            //Length of the ray
-            float laserLength = 1f;
-            //Obtain the layerMask of the layer
-            int layerMask = LayerMask.GetMask("Default");
+        //    //Length of the ray
+        //    float laserLength = 1f;
+        //    //Obtain the layerMask of the layer
+        //    int layerMask = LayerMask.GetMask("Default");
 
-            //Get the first object hit by the ray
-            RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.left, laserLength, layerMask);
+        //    //Get the first object hit by the ray
+        //    RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.left, laserLength, layerMask);
 
-            //Get the first object hit by the ray
-            RaycastHit2D hit2 = Physics2D.Raycast(this.transform.position, Vector2.up, laserLength, layerMask);
+        //    //Get the first object hit by the ray
+        //    RaycastHit2D hit2 = Physics2D.Raycast(this.transform.position, Vector2.up, laserLength, layerMask);
 
-            //Get the first object hit by the ray
-            RaycastHit2D hit3 = Physics2D.Raycast(this.transform.position, Vector2.down, laserLength, layerMask);
+        //    //Get the first object hit by the ray
+        //    RaycastHit2D hit3 = Physics2D.Raycast(this.transform.position, Vector2.down, laserLength, layerMask);
 
-            Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.grey);
-            Debug.DrawRay(transform.position, Vector2.up * laserLength, Color.grey);
-            Debug.DrawRay(transform.position, Vector2.down * laserLength, Color.grey);
+        //    Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.grey);
+        //    Debug.DrawRay(transform.position, Vector2.up * laserLength, Color.grey);
+        //    Debug.DrawRay(transform.position, Vector2.down * laserLength, Color.grey);
 
 
-        }
+        //}
 
     }
 
     public void ElegirPowerup()
     {
-        int power = rnd.Next(1, 3);
+        int power = rnd.Next(1, 4);
 
         switch (power)
         {
@@ -91,14 +91,17 @@ public class PowerScript : MonoBehaviour
                 //Ir mas lento
                 StartCoroutine(TiempoUsoRalentizar());
                 break;
+
             case 2:
                 //Saltar mas
                 StartCoroutine(TiempoUsoPowerSalto());
-                
                 //StartCoroutine("PowerUp1");
-
-
                 break;
+
+            case 3:
+                StartCoroutine(TiempoUsoPowerRecarga());
+                break;
+
             default:
                 //StartCoroutine(TiempoUsoPowerSalto());
                 break;
@@ -107,7 +110,7 @@ public class PowerScript : MonoBehaviour
 
     public void ElegirPowerDown()
     {
-        int power = rnd.Next(1, 3);
+        int power = rnd.Next(1, 4);
 
         switch (power)
         {
@@ -115,14 +118,17 @@ public class PowerScript : MonoBehaviour
                 //Ir mas rapido
                 StartCoroutine(TiempoUsoRalentizarDown());
                 break;
+
             case 2:
-
                 //Saltar menos
-                TiempoUsoPowerSaltoDown();
+                StartCoroutine(TiempoUsoPowerSaltoDown());
                 //StartCoroutine("PowerDown1");
-
-
                 break;
+
+            case 3:
+                StartCoroutine(TiempoUsoPowerRecargaDown());
+                break;
+
             default:
                 //StartCoroutine(TiempoUsoPowerSalto());
                 break;
@@ -137,16 +143,44 @@ public class PowerScript : MonoBehaviour
             if (tipoPower == true)
             {
                 ElegirPowerup();
-                powerGenerator.GenerateRandomWave();
+                //powerGenerator.GenerateRandomWave();
             }
 
             if (tipoPower == false)
             {
                 ElegirPowerDown();
-                powerGenerator.GenerateRandomWave();
+                //powerGenerator.GenerateRandomWave();
             }
+
+            //StartCoroutine(EsperaCoolDown());
+
         }
 
+    }
+
+    public IEnumerator EsperaCoolDown()
+    {
+        collider = this.GetComponent<Collider2D>();
+
+        imagen = this.GetComponent<SpriteRenderer>();
+
+        collider.enabled = false;
+
+        imagen.enabled = false;
+
+        if (tipoPower == true)
+        {
+            ElegirPowerup();
+        }
+
+        if (tipoPower == false)
+        {
+            ElegirPowerDown();
+        }
+
+        yield return new WaitForSeconds(8f);
+
+        powerGenerator.GenerateRandomWave();
     }
 
     //mas salto
@@ -167,8 +201,30 @@ public class PowerScript : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
         player.GetComponent<PlayerScript>().potenciaSalto = 15;
-        powerGenerator.GenerateRandomWave();
+        //powerGenerator.GenerateRandomWave();
     }
+
+    //recarga mas rapida
+    public IEnumerator TiempoUsoPowerRecarga()
+    {
+        collider = this.GetComponent<Collider2D>();
+
+        imagen = this.GetComponent<SpriteRenderer>();
+
+        collider.enabled = false;
+
+        imagen.enabled = false;
+
+        player.GetComponent<PlayerScript>().coolDownDisparo = player.GetComponent<PlayerScript>().coolDownDisparo - 4;
+
+        src.clip = powerUp;
+        src.Play();
+
+        yield return new WaitForSeconds(3f);
+        player.GetComponent<PlayerScript>().coolDownDisparo = 5;
+        //powerGenerator.GenerateRandomWave();
+    }
+
     //mas lento
     public IEnumerator TiempoUsoRalentizar()
     {
@@ -187,7 +243,7 @@ public class PowerScript : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
         Time.timeScale = 1f;
-        powerGenerator.GenerateRandomWave();
+        //powerGenerator.GenerateRandomWave();
     }
     //menos salto
     public IEnumerator TiempoUsoPowerSaltoDown()
@@ -207,7 +263,7 @@ public class PowerScript : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
         player.GetComponent<PlayerScript>().potenciaSalto = 15;
-        powerGenerator.GenerateRandomWave();
+        //powerGenerator.GenerateRandomWave();
 
     }
     //mas rapido
@@ -228,7 +284,28 @@ public class PowerScript : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
         Time.timeScale = 1f;
-        powerGenerator.GenerateRandomWave();
+        //powerGenerator.GenerateRandomWave();
+    }
+
+    //recarga mas lenta
+    public IEnumerator TiempoUsoPowerRecargaDown()
+    {
+        collider = this.GetComponent<Collider2D>();
+
+        imagen = this.GetComponent<SpriteRenderer>();
+
+        collider.enabled = false;
+
+        imagen.enabled = false;
+
+        player.GetComponent<PlayerScript>().coolDownDisparo = player.GetComponent<PlayerScript>().coolDownDisparo + 4;
+
+        src.clip = powerUp;
+        src.Play();
+
+        yield return new WaitForSeconds(3f);
+        player.GetComponent<PlayerScript>().coolDownDisparo = 5;
+        //powerGenerator.GenerateRandomWave();
     }
 
 
