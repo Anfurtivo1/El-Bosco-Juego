@@ -122,7 +122,7 @@ public class Enemigos : MonoBehaviour
 
             if (hit.collider.CompareTag("finishLine"))
             {
-                enemigoManager.generateRandomWaveEnemigo2();
+                //enemigoManager.generateRandomWaveEnemigo2();
                 Destroy(this.gameObject);
             }
 
@@ -271,15 +271,16 @@ public class Enemigos : MonoBehaviour
 
         if (col.gameObject.CompareTag("nextLine"))
         {
-            if (tipo == 2)
-            {
-                enemigoManager.generateRandomWaveEnemigo2();
-            }
+            //if (tipo == 2)
+            //{
+            //    enemigoManager.generateRandomWaveEnemigo2();
+            //}
 
-            else
-            {
-                enemigoManager.generateRandomWave();
-            }
+            //else
+            //{
+            //    enemigoManager.generateRandomWave();
+            //}
+            enemigoManager.generateRandomWave();
         }
 
         if (col.gameObject.CompareTag("finishLine"))
@@ -304,6 +305,7 @@ public class Enemigos : MonoBehaviour
 
         if (col.gameObject.CompareTag("Player"))
         {
+            Destroy(this.gameObject);
             //collider = this.gameObject.GetComponent<Collider2D>();
 
             //imagen = this.gameObject.GetComponent<SpriteRenderer>();
@@ -312,18 +314,20 @@ public class Enemigos : MonoBehaviour
 
             //imagen.enabled = false;
 
-            Destroy(this.gameObject);
-            if (tipo == 2)
-            {
-                enemigoManager.generateRandomWaveEnemigo2();
-            }
+            //if (tipo == 2)
+            //{
+            //    enemigoManager.generateRandomWaveEnemigo2();
+            //}
 
-            else
-            {
-                enemigoManager.generateRandomWave();
-            }
+            //else
+            //{
+            //    enemigoManager.generateRandomWave();
+            //}
+            //Destroy(this.gameObject);
 
-            
+            //StartCoroutine(ChocarseJugador());
+
+
         }
 
     }
@@ -351,5 +355,36 @@ public class Enemigos : MonoBehaviour
         Destroy(this.gameObject);
 
     }
+
+    //public IEnumerator ChocarseJugador()
+    //{
+
+    //    collider = this.GetComponent<Collider2D>();
+
+    //    imagen = this.GetComponent<SpriteRenderer>();
+
+    //    collider.enabled = false;
+
+    //    imagen.enabled = false;
+
+    //    if (tipo == 3)
+    //    {
+    //        //bulletGenerator.GetComponent<BulletGenerator>().pDisparo = false;
+    //    }
+
+    //    yield return new WaitForSeconds(3f);
+
+    //    if (tipo == 2)
+    //    {
+    //        //enemigoManager.generateRandomWaveEnemigo2();
+    //    }
+
+    //    else
+    //    {
+    //        //enemigoManager.generateRandomWave();
+    //    }
+    //    Destroy(this.gameObject);
+
+    //}
 
 }
