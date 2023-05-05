@@ -157,6 +157,7 @@ MonoBehaviour:
   enemigoManager: {fileID: 0}
   enemigo: {fileID: 8403450972694910266}
   cuerpo: {fileID: 8403450972694910264}
+  bulletGenerator: {fileID: 0}
   src: {fileID: 8711789975679187274}
   morir: {fileID: 8300000, guid: c9b0428bc8ef1814da51abf860f12d72, type: 3}
 --- !u!222 &3783418554214176071
@@ -179,7 +180,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

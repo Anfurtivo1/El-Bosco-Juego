@@ -70,12 +70,14 @@
     <Compile Include="Assets\Scrips\MenuMuerteManager.cs" />
     <Compile Include="Assets\Scrips\ProgressBar.cs" />
     <Compile Include="Assets\Scrips\SpikeScript.cs" />
+    <Compile Include="Assets\Scrips\SelectorNivelesScript.cs" />
     <Compile Include="Assets\Scrips\BackgroundScroller.cs" />
     <Compile Include="Assets\Scrips\PlayerScript.cs" />
     <Compile Include="Assets\Scrips\FloorScroller.cs" />
     <Compile Include="Assets\Scrips\BulletScript.cs" />
     <Compile Include="Assets\Scrips\MenuPrincipal.cs" />
-    <Compile Include="Assets\Scrips\SelectorNivelesScript.cs" />
+    <Compile Include="Assets\Scrips\TutorialScript.cs" />
+    <Compile Include="Assets\Scrips\ModoInfinitoManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

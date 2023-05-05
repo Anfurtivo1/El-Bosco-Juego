@@ -23,6 +23,8 @@ public class Enemigos : MonoBehaviour
 
     public AudioClip morir;
 
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -200,7 +202,7 @@ public class Enemigos : MonoBehaviour
         transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
 
         //Length of the ray
-        float laserLength = 5f;
+        float laserLength = 10f;
         //Obtain the layerMask of the layer
         int layerMask = LayerMask.GetMask("Default");
 
@@ -212,7 +214,6 @@ public class Enemigos : MonoBehaviour
         {
             //Hit something, print the tag of the object
             //Debug.Log("detected: " + hit.collider.tag);
-            this.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 15, ForceMode2D.Impulse);
 
             if (hit.collider.CompareTag("proyectil"))
             {
@@ -222,6 +223,15 @@ public class Enemigos : MonoBehaviour
                 //proyectilGenerator.generateWave();
                 Destroy(this.gameObject);
             }
+
+            if (hit.collider.CompareTag("Player"))
+            {
+                    enemigo.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                    enemigo.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+                    this.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 100, ForceMode2D.Force);
+                
+            }
+
 
         }
 
@@ -235,8 +245,16 @@ public class Enemigos : MonoBehaviour
         //Method to draw the ray in scene for debug purpose
         Debug.DrawRay(transform.position, Vector2.left * laserLength, Color.red);
 
-        Destroy(this.gameObject, 5f);
+        //Destroy(this.gameObject, 5f);
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collider.gameObject.CompareTag("Player"))
+    //    {
+    //        Destroy(this.gameObject);
+    //    }
+    //}
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -244,6 +262,13 @@ public class Enemigos : MonoBehaviour
         {
             //Physics2D.IgnoreLayerCollision(col.GetComponent<Collider2D>(), this.GetComponent<Collider2D>(),true);
         }
+
+        if (col.gameObject.CompareTag("Suelo"))
+        {
+            //Physics2D.IgnoreLayerCollision(col.GetComponent<Collider2D>(), this.GetComponent<Collider2D>(),true);
+            enemigo.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+        }
+
         if (col.gameObject.CompareTag("nextLine"))
         {
             if (tipo == 2)
