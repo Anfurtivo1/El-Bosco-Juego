@@ -10,7 +10,7 @@ public class Enemigos : MonoBehaviour
     public GameObject enemigo;
     public Rigidbody2D cuerpo;
 
-    [HideInInspector]
+
     Collider2D collider;
 
 

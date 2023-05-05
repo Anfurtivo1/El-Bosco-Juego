@@ -23,6 +23,10 @@ public class PowerScript : MonoBehaviour
 
     float PDownCD = 0;
 
+    public AudioSource src;
+    public AudioClip powerUp;
+    public AudioClip powerDown;
+
     // Update is called once per frame
     void Update()
     {
@@ -158,6 +162,9 @@ public class PowerScript : MonoBehaviour
 
         player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto + 20;
 
+        src.clip = powerUp;
+        src.Play();
+
         yield return new WaitForSeconds(3f);
         player.GetComponent<PlayerScript>().potenciaSalto = 15;
         powerGenerator.GenerateRandomWave();
@@ -174,6 +181,9 @@ public class PowerScript : MonoBehaviour
         imagen.enabled = false;
 
         Time.timeScale = 0.5f;
+
+        src.clip = powerUp;
+        src.Play();
 
         yield return new WaitForSeconds(3f);
         Time.timeScale = 1f;
@@ -192,6 +202,9 @@ public class PowerScript : MonoBehaviour
 
         player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto -5;
 
+        src.clip = powerDown;
+        src.Play();
+
         yield return new WaitForSeconds(3f);
         player.GetComponent<PlayerScript>().potenciaSalto = 15;
         powerGenerator.GenerateRandomWave();
@@ -209,6 +222,9 @@ public class PowerScript : MonoBehaviour
         imagen.enabled = false;
 
         Time.timeScale = 1.5f;
+
+        src.clip = powerDown;
+        src.Play();
 
         yield return new WaitForSeconds(3f);
         Time.timeScale = 1f;
