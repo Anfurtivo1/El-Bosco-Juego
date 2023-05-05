@@ -17,12 +17,18 @@ public class MenuPrincipal : MonoBehaviour
         
     //}
 
-    public void CargarEscena1()
+    public void CargarModoInfinito()
     {
         SceneManager.LoadScene("Modo infinito");
     }
 
-    public void CargarEscena2()
+    public void CargarTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+
+    }
+
+    public void CargarModoHistoria()
     {
         SceneManager.LoadScene("Selector Nivel");
         

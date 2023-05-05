@@ -630,8 +630,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124923214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4, y: -12.8, z: 0}
-  m_LocalScale: {x: 0.3134, y: 13.735, z: 1}
+  m_LocalPosition: {x: -7.4, y: -11.17, z: 0}
+  m_LocalScale: {x: 27.143574, y: 13.219936, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1281,6 +1281,7 @@ GameObject:
   - component: {fileID: 519420035}
   - component: {fileID: 519420036}
   - component: {fileID: 519420037}
+  - component: {fileID: 519420038}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1499,6 +1500,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6251889537927034f9b5440302d1f810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &519420038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b24b6298594a64f99ecf15c6d2b714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &632361973
@@ -3953,7 +3966,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425285055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.81, y: -3.79, z: 0}
+  m_LocalPosition: {x: -10.15, y: -3.79, z: 0}
   m_LocalScale: {x: 0.3134, y: 26.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5082,7 +5095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905077927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.89, y: -3.9, z: 0}
+  m_LocalPosition: {x: 23.89, y: -3.61, z: 0}
   m_LocalScale: {x: 0.47617468, y: 0.2836, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5311,7 +5324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928199370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.56, y: -3.9, z: 0}
+  m_LocalPosition: {x: 19.03, y: -3.9, z: 0}
   m_LocalScale: {x: 0.47617468, y: 0.2836, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5773,7 +5786,7 @@ GameObject:
   - component: {fileID: 2029766861}
   - component: {fileID: 2029766862}
   - component: {fileID: 2029766863}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5913,7 +5926,7 @@ MonoBehaviour:
   score: 0
   texto: {fileID: 1944626989}
   vidas: 1
-  damage: 5
+  damage: 1
   textoVidas: {fileID: 1944674441}
   proyectil: {fileID: 5361478524353057498, guid: 1458f9e1769242149ac052afde4a0fd8, type: 3}
   proyectilGenerator: {fileID: 2029766862}
@@ -5959,7 +5972,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.182
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
