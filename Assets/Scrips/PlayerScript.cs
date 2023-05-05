@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
     public int potenciaSalto;
     public float score;
     bool vivo;
-    public Text texto;
+    public TextMeshProUGUI texto;
     public int vidas;
     //private bool isInvincible = false;
     //[SerializeField]
@@ -84,21 +84,24 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
+        //PlayerPrefs.DeleteAll();
 
-        
 
         //PlayerPrefs.DeleteKey("salto");
-        PlayerPrefs.Save();
+        //PlayerPrefs.Save();
+        //Debug.LogWarning("Antes del If El boton para saltar es: " + PlayerPrefs.GetString("salto"));
         if (PlayerPrefs.GetString("salto") == "")
         {
             PlayerPrefs.SetString("salto", KeyCode.Space.ToString());
+            botonSalto = PlayerPrefs.GetString("salto");
             PlayerPrefs.Save();
             
         }
-
-        textoVidas.text = "" + vidas;
         botonSalto = PlayerPrefs.GetString("salto");
+        //Debug.LogWarning("Despues del If El boton para saltar es: " + PlayerPrefs.GetString("salto"));
         //Debug.Log("El boton para saltar es: " + PlayerPrefs.GetString("salto"));
+        //textoVidas.text = "" + vidas;
+        
 
     }
     // Update is called once per frame
@@ -219,6 +222,8 @@ public class PlayerScript : MonoBehaviour
 
             PlayerPrefs.SetString("disparar", KeyCode.D.ToString());
             PlayerPrefs.Save();
+
+            botonDisparo = PlayerPrefs.GetString("disparar");
         }
 
         //PlayerPrefs.DeleteKey("disparar");
