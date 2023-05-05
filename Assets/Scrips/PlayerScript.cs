@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour
     //[SerializeField]
     //private GameObject model;
     public int damage;
-    public Text textoVidas;
+    //public Text textoVidas;
     RaycastHit hit;
     public GameObject proyectil;
 
@@ -194,17 +194,41 @@ public class PlayerScript : MonoBehaviour
     //    model.transform.localScale = scale;
     //}
 
+    //public IEnumerator Morirse(Collider2D col, int daño)
+    //{
+    //    collider = this.GetComponent<Collider2D>();
+
+    //    imagen = this.GetComponent<SpriteRenderer>();
+
+    //    collider.enabled = false;
+
+    //    imagen.enabled = false;
+
+    //    src.clip = morir;
+    //    src.Play();
+
+    //    if (tipo == 3)
+    //    {
+    //        bulletGenerator.GetComponent<BulletGenerator>().pDisparo = false;
+    //    }
+
+    //    Destroy(col.gameObject);
+    //    yield return new WaitForSeconds(1f);
+    //    Destroy(this.gameObject);
+
+    //}
+
     private void perderVida(int cantidad)
     {
         //if (isInvincible) return;
         //Debug.Log("*Colision�: Vida fuera");
         vidas = vidas - cantidad;
-        textoVidas.text = ""+vidas;
+        //textoVidas.text = ""+vidas;
 
         if (vidas < 0)
         {
             vidas = 0;
-            textoVidas.text = "" + vidas;
+            //textoVidas.text = "" + vidas;
         }
 
         src.clip = recibirDaño;

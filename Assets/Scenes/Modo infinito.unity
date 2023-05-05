@@ -4627,7 +4627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 999d04c0ea94ccc41b3d80788160695b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 129bb704405949d4ea4b3059ea74b85b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6041,7 +6041,6 @@ MonoBehaviour:
   texto: {fileID: 432475617}
   vidas: 1
   damage: 1
-  textoVidas: {fileID: 0}
   proyectil: {fileID: 5361478524353057498, guid: 1458f9e1769242149ac052afde4a0fd8, type: 3}
   proyectilGenerator: {fileID: 2029766862}
   botonSalto: 

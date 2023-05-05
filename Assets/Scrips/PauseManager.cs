@@ -33,6 +33,8 @@ public class PauseManager : MonoBehaviour
 
     public Button controlesDefault;
 
+    string textoPausado;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +58,7 @@ public class PauseManager : MonoBehaviour
             Mprncipal.gameObject.SetActive(true);
             opciones.gameObject.SetActive(true);
             salir.gameObject.SetActive(true);
+            //textoPausado = player.GetComponent<PlayerScript>().texto.text;
         }
     }
 
@@ -69,6 +72,7 @@ public class PauseManager : MonoBehaviour
             opciones.gameObject.SetActive(false);
             Mprncipal.gameObject.SetActive(false);
             salir.gameObject.SetActive(false);
+            //player.GetComponent<PlayerScript>().texto.text = textoPausado;
         }
     }
 
