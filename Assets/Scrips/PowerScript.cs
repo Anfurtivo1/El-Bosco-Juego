@@ -79,15 +79,13 @@ public class PowerScript : MonoBehaviour
 
     public void ElegirPowerup()
     {
-        int power = rnd.Next(1, 2);
-
-        power = 2;
+        int power = rnd.Next(1, 3);
 
         switch (power)
         {
             case 1:
-                //Ir mas rapido
-                StartCoroutine(TiempoUsoPowerSalto());
+                //Ir mas lento
+                StartCoroutine(TiempoUsoRalentizar());
                 break;
             case 2:
                 //Saltar mas
@@ -98,22 +96,20 @@ public class PowerScript : MonoBehaviour
 
                 break;
             default:
-                StartCoroutine(TiempoUsoPowerSalto());
+                //StartCoroutine(TiempoUsoPowerSalto());
                 break;
         }
     }
 
     public void ElegirPowerDown()
     {
-        int power = rnd.Next(1, 2);
-
-        power = 2;
+        int power = rnd.Next(1, 3);
 
         switch (power)
         {
             case 1:
-                //Ir mas lento
-                StartCoroutine(TiempoUsoPowerSalto());
+                //Ir mas rapido
+                StartCoroutine(TiempoUsoRalentizarDown());
                 break;
             case 2:
 
@@ -124,7 +120,7 @@ public class PowerScript : MonoBehaviour
 
                 break;
             default:
-                StartCoroutine(TiempoUsoPowerSalto());
+                //StartCoroutine(TiempoUsoPowerSalto());
                 break;
         }
     }
@@ -149,6 +145,7 @@ public class PowerScript : MonoBehaviour
 
     }
 
+    //mas salto
     public IEnumerator TiempoUsoPowerSalto()
     {
         collider = this.GetComponent<Collider2D>();
@@ -165,8 +162,8 @@ public class PowerScript : MonoBehaviour
         player.GetComponent<PlayerScript>().potenciaSalto = 15;
         powerGenerator.GenerateRandomWave();
     }
-
-    public void TiempoUsoPowerSaltoDown()
+    //mas lento
+    public IEnumerator TiempoUsoRalentizar()
     {
         collider = this.GetComponent<Collider2D>();
 
@@ -176,10 +173,46 @@ public class PowerScript : MonoBehaviour
 
         imagen.enabled = false;
 
-        PDownPillado = true;
+        Time.timeScale = 0.5f;
 
-        player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto - 8;
+        yield return new WaitForSeconds(3f);
+        Time.timeScale = 1f;
+        powerGenerator.GenerateRandomWave();
+    }
+    //menos salto
+    public IEnumerator TiempoUsoPowerSaltoDown()
+    {
+        collider = this.GetComponent<Collider2D>();
 
+        imagen = this.GetComponent<SpriteRenderer>();
+
+        collider.enabled = false;
+
+        imagen.enabled = false;
+
+        player.GetComponent<PlayerScript>().potenciaSalto = player.GetComponent<PlayerScript>().potenciaSalto -5;
+
+        yield return new WaitForSeconds(3f);
+        player.GetComponent<PlayerScript>().potenciaSalto = 15;
+        powerGenerator.GenerateRandomWave();
+
+    }
+    //mas rapido
+    public IEnumerator TiempoUsoRalentizarDown()
+    {
+        collider = this.GetComponent<Collider2D>();
+
+        imagen = this.GetComponent<SpriteRenderer>();
+
+        collider.enabled = false;
+
+        imagen.enabled = false;
+
+        Time.timeScale = 1.5f;
+
+        yield return new WaitForSeconds(3f);
+        Time.timeScale = 1f;
+        powerGenerator.GenerateRandomWave();
     }
 
 
