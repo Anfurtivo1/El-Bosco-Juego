@@ -11,7 +11,7 @@ using UnityEditor;
 
 public class PauseManager : MonoBehaviour
 {
-    bool paused = false;
+    public bool paused = false;
     public Button resumen;
     public Button Mprncipal;
     public Button opciones;

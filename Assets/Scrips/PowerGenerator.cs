@@ -18,6 +18,8 @@ public class PowerGenerator : MonoBehaviour
 
     System.Random rnd = new System.Random();
 
+    public GameObject pauseManager;
+
     private void Start()
     {
         GenerarPowerUp();
@@ -26,10 +28,14 @@ public class PowerGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentSpeed < maxSpeed)
+        if (!pauseManager.GetComponent<PauseManager>().paused)
         {
-            currentSpeed += SpeedMultiplier;
+            if (currentSpeed < maxSpeed)
+            {
+                currentSpeed += SpeedMultiplier;
+            }
         }
+        
 
         
 

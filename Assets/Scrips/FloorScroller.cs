@@ -10,6 +10,8 @@ public class FloorScroller : MonoBehaviour
     private float offset;
     private Material mat;
 
+    public GameObject pauseManager;
+
 
 
     private void Start()
@@ -22,7 +24,11 @@ public class FloorScroller : MonoBehaviour
     {
         offset += (Time.deltaTime * Speed) / 10;
         mat.SetTextureOffset("_MainTex", new Vector2(offset, 0));
-        StartCoroutine(aumentarVel());
+        if (!pauseManager.GetComponent<PauseManager>().paused)
+        {
+            StartCoroutine(aumentarVel());
+        }
+        
     }
 
     private IEnumerator aumentarVel()

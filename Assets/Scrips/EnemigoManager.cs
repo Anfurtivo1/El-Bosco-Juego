@@ -12,6 +12,8 @@ public class EnemigoManager : MonoBehaviour
 
     public float SpeedMultiplier;
 
+    public GameObject pauseManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +24,14 @@ public class EnemigoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentSpeed < maxSpeed)
+        if (!pauseManager.GetComponent<PauseManager>().paused)
         {
-            currentSpeed += SpeedMultiplier;
+            if (currentSpeed < maxSpeed)
+            {
+                currentSpeed += SpeedMultiplier;
+            }
         }
+        
 
     }
 
