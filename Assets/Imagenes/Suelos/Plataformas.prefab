@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2759417652639771201}
   - component: {fileID: 2759417652639771214}
   - component: {fileID: 2759417652639771200}
+  - component: {fileID: 4097891249526961055}
   m_Layer: 0
   m_Name: Plataformas
   m_TagString: Suelo
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3071542, y: 1.1211369}
   m_EdgeRadius: 0
+--- !u!114 &4097891249526961055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2759417652639771215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12f82981c7c4f74f92a2fb6fcb19627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSpeed: 10
