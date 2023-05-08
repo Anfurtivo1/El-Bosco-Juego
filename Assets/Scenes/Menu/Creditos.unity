@@ -316,10 +316,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Atras
+  m_text: "Atr\xE1s"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9f8e033d93e7b924eb89796e628427a6, type: 2}
+  m_sharedMaterial: {fileID: -8829432747896678169, guid: 9f8e033d93e7b924eb89796e628427a6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -634,6 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1609,9 +1610,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Maryam Delfany
-
-    David Brull Flores'
+  m_text: "Maryam Delfany\nDavid Brull Flores\nFrancisco Javier Tall\xF3n Vera"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d51700f05555cb49b27340e93769b45, type: 2}
   m_sharedMaterial: {fileID: 216816197836886955, guid: 3d51700f05555cb49b27340e93769b45, type: 2}
@@ -1723,7 +1722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82.499084, y: -192}
+  m_AnchoredPosition: {x: 80.495, y: -199.8}
   m_SizeDelta: {x: 185.8556, y: 46.4639}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935880756
@@ -1746,7 +1745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Francisco Tall\xF3n Vera\nAndr\xE9s S\xE1nchez Ju\xE1rez"
+  m_text: "Francisco Javier Tall\xF3n Vera\nAndr\xE9s S\xE1nchez Ju\xE1rez"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d51700f05555cb49b27340e93769b45, type: 2}
   m_sharedMaterial: {fileID: 216816197836886955, guid: 3d51700f05555cb49b27340e93769b45, type: 2}
@@ -1809,7 +1808,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -620.3043, w: -135.53677}
+  m_margin: {x: 0, y: 0, z: -685.4282, w: -135.53677}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
