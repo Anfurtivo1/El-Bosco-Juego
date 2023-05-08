@@ -22,7 +22,7 @@ public class ProgressBar : MonoBehaviour
     void Update()
     {
         progreso2 = PlayerScript.progreso.score;
-        progreso2 = progreso2 / 400;
+        progreso2 = progreso2 / 250;
         progressBar.fillAmount = progreso2;
 
         if (progressBar.fillAmount == 1)

@@ -71,6 +71,7 @@ public class Enemigos : MonoBehaviour
         {
             if (!pauseManager.GetComponent<PauseManager>().paused)
             {
+                transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
                 if (currentSpeed < maxSpeed)
                 {
                     currentSpeed += SpeedMultiplier;
@@ -128,6 +129,7 @@ public class Enemigos : MonoBehaviour
         {
             if (!pauseManager.GetComponent<PauseManager>().paused)
             {
+                transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
                 if (currentSpeed < maxSpeed)
                 {
                     currentSpeed += SpeedMultiplier;
@@ -182,6 +184,7 @@ public class Enemigos : MonoBehaviour
         {
             if (!pauseManager.GetComponent<PauseManager>().paused)
             {
+                transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
                 if (currentSpeed < maxSpeed)
                 {
                     currentSpeed += SpeedMultiplier;
@@ -215,6 +218,7 @@ public class Enemigos : MonoBehaviour
                 Destroy(this.gameObject);
             }
 
+
             
 
         }
@@ -237,6 +241,24 @@ public class Enemigos : MonoBehaviour
             transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
             StartCoroutine(MoverseY());
         }
+        else
+        {
+            if (!pauseManager.GetComponent<PauseManager>().paused)
+            {
+                transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
+                //StartCoroutine(MoverseY());
+
+                if (true)
+                {
+
+                }
+
+                if (currentSpeed < maxSpeed)
+                {
+                    currentSpeed += SpeedMultiplier;
+                }
+            }
+        }
     }
 
     public void Enemigo5()
@@ -249,6 +271,7 @@ public class Enemigos : MonoBehaviour
         {
             if (!pauseManager.GetComponent<PauseManager>().paused)
             {
+                transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
                 if (currentSpeed < maxSpeed)
                 {
                     currentSpeed += SpeedMultiplier;
@@ -415,9 +438,9 @@ public class Enemigos : MonoBehaviour
     public IEnumerator MoverseY()
     {
 
-        transform.Translate(Vector2.up * enemigoManager.currentSpeed * Time.deltaTime);
-        yield return new WaitForSeconds(1f);
-        transform.Translate(Vector2.down * enemigoManager.currentSpeed * Time.deltaTime);
+        transform.Translate(Vector2.up * currentSpeed * Time.deltaTime);
+        yield return new WaitForSeconds(0.6f);
+        transform.Translate(Vector2.down * currentSpeed * Time.deltaTime);
 
     }
 

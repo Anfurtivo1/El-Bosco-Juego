@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3783418554214176071}
   - component: {fileID: 8711789975679187274}
   m_Layer: 7
-  m_Name: Enemigo2
+  m_Name: Enemigo4
   m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ec7a42a4114a9ac458bd64797ce0ea65, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d0f7e7e677d1ff4393fa5d87e56fb39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,7 +111,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.11, y: 2.68}
+    oldSize: {x: 2.34, y: 3.6}
     newSize: {x: 3.11, y: 2.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -153,16 +153,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92ebf8a6571e504995c3818b7badccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipo: 2
+  tipo: 4
   enemigoManager: {fileID: 0}
   enemigo: {fileID: 8403450972694910266}
   cuerpo: {fileID: 8403450972694910264}
   bulletGenerator: {fileID: 0}
   src: {fileID: 8711789975679187274}
   morir: {fileID: 8300000, guid: c9b0428bc8ef1814da51abf860f12d72, type: 3}
-  minSpeed: 10
-  maxSpeed: 40
-  currentSpeed: 10
+  minSpeed: 7
+  maxSpeed: 25
+  currentSpeed: 7
   SpeedMultiplier: 0.001
   pauseManager: {fileID: 250483815068335510, guid: 9ab549d7b1e83bb4db5e277fd7f7e26a, type: 3}
 --- !u!222 &3783418554214176071

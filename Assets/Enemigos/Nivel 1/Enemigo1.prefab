@@ -164,7 +164,7 @@ MonoBehaviour:
   maxSpeed: 10
   currentSpeed: 3
   SpeedMultiplier: 0.001
-  pauseManager: {fileID: 0}
+  pauseManager: {fileID: 250483815068335510, guid: 9ab549d7b1e83bb4db5e277fd7f7e26a, type: 3}
 --- !u!222 &204137592027804658
 CanvasRenderer:
   m_ObjectHideFlags: 0
