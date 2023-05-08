@@ -35,11 +35,28 @@ public class PauseManager : MonoBehaviour
 
     string textoPausado;
 
+    public AudioSource src;
+    public Slider slider;
+
+    public GameObject fondoVolumen;
+
+    float volumenActual;
+
     // Start is called before the first frame update
     void Start()
     {
         paused = false;
         Time.timeScale = 1f;
+        volumenActual = PlayerPrefs.GetFloat("VMusica");
+        if (volumenActual != 0.1f)
+        {
+            src.volume = volumenActual;
+        }
+        else
+        {
+            src.volume = 0.1f;
+        }
+        slider.value = volumenActual;
     }
 
     // Update is called once per frame
@@ -109,6 +126,8 @@ public class PauseManager : MonoBehaviour
         controlesDefault.gameObject.SetActive(true);
         fondoSalto.gameObject.SetActive(true);
         fondoDisparo.gameObject.SetActive(true);
+        fondoVolumen.gameObject.SetActive(true);
+        slider.gameObject.SetActive(true);
         atras.gameObject.SetActive(true);
 
     }
@@ -118,7 +137,7 @@ public class PauseManager : MonoBehaviour
         Debug.Log("Nombre actual del boton: "+ btnTextoSalto.text);
 
         btnTextoSalto.text = "pulsa una tecla...";
-        btnTextoSalto.fontSize = 50;
+        btnTextoSalto.fontSize = 40;
 
         Debug.Log("Nombre nuevo del boton: " + btnTextoSalto.text);
 
@@ -129,7 +148,7 @@ public class PauseManager : MonoBehaviour
         Debug.Log("Nombre actual del boton: " + btnTextoDisparo.text);
 
         btnTextoDisparo.text = "pulsa una tecla...";
-        btnTextoDisparo.fontSize = 50;
+        btnTextoDisparo.fontSize = 40;
 
         Debug.Log("Nombre nuevo del boton: " + btnTextoDisparo.text);
 
@@ -159,6 +178,8 @@ public class PauseManager : MonoBehaviour
         controlesDefault.gameObject.SetActive(false);
         fondoSalto.gameObject.SetActive(false);
         fondoDisparo.gameObject.SetActive(false);
+        fondoVolumen.gameObject.SetActive(false);
+        slider.gameObject.SetActive(false);
 
         opciones.gameObject.SetActive(true);
         resumen.gameObject.SetActive(true);
@@ -202,6 +223,15 @@ public class PauseManager : MonoBehaviour
             }
         }
 
+    }
+
+    public void AjustarVolumen()
+    {
+        src.volume = slider.value;
+        volumenActual = slider.value;
+
+        PlayerPrefs.SetFloat("VMusica",slider.value);
+        PlayerPrefs.Save();
     }
 
     public void Salir()
