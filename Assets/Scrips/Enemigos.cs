@@ -232,7 +232,11 @@ public class Enemigos : MonoBehaviour
 
     public void Enemigo4()
     {
-
+        if (enemigoManager != null)
+        {
+            transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
+            StartCoroutine(MoverseY());
+        }
     }
 
     public void Enemigo5()
@@ -405,6 +409,15 @@ public class Enemigos : MonoBehaviour
         Destroy(col.gameObject);
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
+
+    }
+
+    public IEnumerator MoverseY()
+    {
+
+        transform.Translate(Vector2.up * enemigoManager.currentSpeed * Time.deltaTime);
+        yield return new WaitForSeconds(1f);
+        transform.Translate(Vector2.down * enemigoManager.currentSpeed * Time.deltaTime);
 
     }
 
