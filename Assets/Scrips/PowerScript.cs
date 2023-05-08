@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PowerScript : MonoBehaviour
@@ -26,6 +27,8 @@ public class PowerScript : MonoBehaviour
     public AudioSource src;
     public AudioClip powerUp;
     public AudioClip powerDown;
+
+    
 
     // Update is called once per frame
     void Update()
@@ -158,35 +161,43 @@ public class PowerScript : MonoBehaviour
 
     }
 
-    public IEnumerator EsperaCoolDown()
-    {
-        collider = this.GetComponent<Collider2D>();
+    //public IEnumerator EsperaCoolDown()
+    //{
+    //    collider = this.GetComponent<Collider2D>();
 
-        imagen = this.GetComponent<SpriteRenderer>();
+    //    imagen = this.GetComponent<SpriteRenderer>();
 
-        collider.enabled = false;
+    //    collider.enabled = false;
 
-        imagen.enabled = false;
+    //    imagen.enabled = false;
 
-        if (tipoPower == true)
-        {
-            ElegirPowerup();
-        }
+    //    if (tipoPower == true)
+    //    {
+    //        ElegirPowerup();
+    //    }
 
-        if (tipoPower == false)
-        {
-            ElegirPowerDown();
-        }
+    //    if (tipoPower == false)
+    //    {
+    //        ElegirPowerDown();
+    //    }
 
-        yield return new WaitForSeconds(8f);
+    //    yield return new WaitForSeconds(8f);
 
-        powerGenerator.GenerateRandomWave();
-    }
+    //    powerGenerator.GenerateRandomWave();
+    //}
 
     //mas salto
     public IEnumerator TiempoUsoPowerSalto()
     {
-        collider = this.GetComponent<Collider2D>();
+
+    //public TextMeshProUGUI txtMasSalto;
+    //public TextMeshProUGUI txtMenosVelocidad;
+    //public TextMeshProUGUI txtRecargaRapida;
+    //public TextMeshProUGUI txtMenosSalto;
+    //public TextMeshProUGUI txtMasVelocidad;
+    //public TextMeshProUGUI txtRecargaLenta;
+
+    collider = this.GetComponent<Collider2D>();
 
         imagen = this.GetComponent<SpriteRenderer>();
 
@@ -199,9 +210,12 @@ public class PowerScript : MonoBehaviour
         src.clip = powerUp;
         src.Play();
 
+        powerGenerator.GetComponent<PowerGenerator>().txtMasSalto.gameObject.SetActive(true);
+
         yield return new WaitForSeconds(3f);
         player.GetComponent<PlayerScript>().potenciaSalto = 15;
-        //powerGenerator.GenerateRandomWave();
+
+        powerGenerator.GetComponent<PowerGenerator>().txtMasSalto.gameObject.SetActive(false);
     }
 
     //recarga mas rapida
@@ -220,9 +234,12 @@ public class PowerScript : MonoBehaviour
         src.clip = powerUp;
         src.Play();
 
+        powerGenerator.GetComponent<PowerGenerator>().txtRecargaRapida.gameObject.SetActive(true);
+
         yield return new WaitForSeconds(3f);
         player.GetComponent<PlayerScript>().coolDownDisparo = 5;
-        //powerGenerator.GenerateRandomWave();
+
+        powerGenerator.GetComponent<PowerGenerator>().txtRecargaRapida.gameObject.SetActive(false);
     }
 
     //mas lento
@@ -241,9 +258,12 @@ public class PowerScript : MonoBehaviour
         src.clip = powerUp;
         src.Play();
 
+        powerGenerator.GetComponent<PowerGenerator>().txtMenosVelocidad.gameObject.SetActive(true);
+
         yield return new WaitForSeconds(3f);
         Time.timeScale = 1f;
-        //powerGenerator.GenerateRandomWave();
+
+        powerGenerator.GetComponent<PowerGenerator>().txtMenosVelocidad.gameObject.SetActive(false);
     }
     //menos salto
     public IEnumerator TiempoUsoPowerSaltoDown()
@@ -261,9 +281,12 @@ public class PowerScript : MonoBehaviour
         src.clip = powerDown;
         src.Play();
 
+        powerGenerator.GetComponent<PowerGenerator>().txtMenosSalto.gameObject.SetActive(true);
+
         yield return new WaitForSeconds(3f);
         player.GetComponent<PlayerScript>().potenciaSalto = 15;
-        //powerGenerator.GenerateRandomWave();
+
+        powerGenerator.GetComponent<PowerGenerator>().txtMenosSalto.gameObject.SetActive(false);
 
     }
     //mas rapido
@@ -282,9 +305,12 @@ public class PowerScript : MonoBehaviour
         src.clip = powerDown;
         src.Play();
 
+        powerGenerator.GetComponent<PowerGenerator>().txtMasVelocidad.gameObject.SetActive(true);
+
         yield return new WaitForSeconds(3f);
         Time.timeScale = 1f;
-        //powerGenerator.GenerateRandomWave();
+
+        powerGenerator.GetComponent<PowerGenerator>().txtMasVelocidad.gameObject.SetActive(false);
     }
 
     //recarga mas lenta
@@ -303,9 +329,12 @@ public class PowerScript : MonoBehaviour
         src.clip = powerUp;
         src.Play();
 
+        powerGenerator.GetComponent<PowerGenerator>().txtRecargaLenta.gameObject.SetActive(true);
+
         yield return new WaitForSeconds(3f);
         player.GetComponent<PlayerScript>().coolDownDisparo = 5;
-        //powerGenerator.GenerateRandomWave();
+
+        powerGenerator.GetComponent<PowerGenerator>().txtRecargaLenta.gameObject.SetActive(false);
     }
 
 

@@ -106,6 +106,16 @@ MonoBehaviour:
   src: {fileID: 5984747372650879250}
   powerUp: {fileID: 8300000, guid: 3c4a13b853a10114385779a0684afdac, type: 3}
   powerDown: {fileID: 8300000, guid: dafae6e677b1bb5428282741998bf0b6, type: 3}
+  txtMasSalto: {fileID: 0}
+  txtMenosVelocidad: {fileID: 0}
+  txtRecargaRapida: {fileID: 0}
+  txtMenosSalto: {fileID: 0}
+  txtMasVelocidad: {fileID: 0}
+  txtRecargaLenta: {fileID: 0}
+  maxSpeed: 15
+  currentSpeed: 5
+  SpeedMultiplier: 0.001
+  pauseManager: {fileID: 0}
 --- !u!61 &3561041138612384726
 BoxCollider2D:
   m_ObjectHideFlags: 0

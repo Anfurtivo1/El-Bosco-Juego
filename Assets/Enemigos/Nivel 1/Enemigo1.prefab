@@ -160,6 +160,11 @@ MonoBehaviour:
   bulletGenerator: {fileID: 0}
   src: {fileID: 6575073906567784921}
   morir: {fileID: 8300000, guid: c9b0428bc8ef1814da51abf860f12d72, type: 3}
+  minSpeed: 3
+  maxSpeed: 10
+  currentSpeed: 3
+  SpeedMultiplier: 0.001
+  pauseManager: {fileID: 0}
 --- !u!222 &204137592027804658
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -23,7 +23,15 @@ public class Enemigos : MonoBehaviour
 
     public AudioClip morir;
 
-    
+    public float minSpeed;
+    public float maxSpeed;
+    public float currentSpeed;
+
+    public float SpeedMultiplier;
+
+    public GameObject pauseManager;
+
+
 
     // Update is called once per frame
     void Update()
@@ -58,6 +66,16 @@ public class Enemigos : MonoBehaviour
         if (enemigoManager != null)
         {
             transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
+        }
+        else
+        {
+            if (!pauseManager.GetComponent<PauseManager>().paused)
+            {
+                if (currentSpeed < maxSpeed)
+                {
+                    currentSpeed += SpeedMultiplier;
+                }
+            }
         }
 
 
@@ -106,6 +124,16 @@ public class Enemigos : MonoBehaviour
         {
             transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
         }
+        else
+        {
+            if (!pauseManager.GetComponent<PauseManager>().paused)
+            {
+                if (currentSpeed < maxSpeed)
+                {
+                    currentSpeed += SpeedMultiplier;
+                }
+            }
+        }
 
 
         //Length of the ray
@@ -149,6 +177,16 @@ public class Enemigos : MonoBehaviour
         if (enemigoManager != null)
         {
             transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
+        }
+        else
+        {
+            if (!pauseManager.GetComponent<PauseManager>().paused)
+            {
+                if (currentSpeed < maxSpeed)
+                {
+                    currentSpeed += SpeedMultiplier;
+                }
+            }
         }
 
 
@@ -199,7 +237,21 @@ public class Enemigos : MonoBehaviour
 
     public void Enemigo5()
     {
-        transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
+        if (enemigoManager != null)
+        {
+            transform.Translate(Vector2.left * enemigoManager.currentSpeed * Time.deltaTime);
+        }
+        else
+        {
+            if (!pauseManager.GetComponent<PauseManager>().paused)
+            {
+                if (currentSpeed < maxSpeed)
+                {
+                    currentSpeed += SpeedMultiplier;
+                }
+            }
+        }
+        
 
         //Length of the ray
         float laserLength = 10f;
