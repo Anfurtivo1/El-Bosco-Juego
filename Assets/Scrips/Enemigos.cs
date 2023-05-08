@@ -307,7 +307,7 @@ public class Enemigos : MonoBehaviour
             {
                     enemigo.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                     enemigo.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
-                    this.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 100, ForceMode2D.Force);
+                    this.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 50, ForceMode2D.Force);
                 
             }
 

@@ -1211,7 +1211,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1663813002}
         m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: CargarModoInfinito
+        m_MethodName: CargarSalir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

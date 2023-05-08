@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ec7a42a4114a9ac458bd64797ce0ea65, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6049655fdbecbf448890bd9f8955ee17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,18 +107,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018296301, y: -0.17832899}
+  m_Offset: {x: 0.045909733, y: 0.042804718}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.11, y: 2.68}
+    oldSize: {x: 2.16, y: 2.93}
     newSize: {x: 3.11, y: 2.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7980776, y: 2.3066597}
+  m_Size: {x: 1.8708148, y: 2.748927}
   m_EdgeRadius: 0
 --- !u!50 &8403450972694910264
 Rigidbody2D:
@@ -160,6 +160,11 @@ MonoBehaviour:
   bulletGenerator: {fileID: 0}
   src: {fileID: 8711789975679187274}
   morir: {fileID: 8300000, guid: c9b0428bc8ef1814da51abf860f12d72, type: 3}
+  minSpeed: 0
+  maxSpeed: 0
+  currentSpeed: 0
+  SpeedMultiplier: 0
+  pauseManager: {fileID: 0}
 --- !u!222 &3783418554214176071
 CanvasRenderer:
   m_ObjectHideFlags: 0
