@@ -15,7 +15,7 @@ C:/Users/Usuario/Desktop/El Bosco Juego/El-Bosco-Juego
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-9894
+12131
 Successfully changed project path to: C:/Users/Usuario/Desktop/El Bosco Juego/El-Bosco-Juego
 C:/Users/Usuario/Desktop/El Bosco Juego/El-Bosco-Juego
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Usuario/Desktop/El Bosco Juego/El-Bosco-Juego
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 142.24 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 433.87 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.2f1 (d6360bedb9a0)
 [Subsystems] Discovering subsystems at path E:/Unity 2021.3.2fi/Unity 2021.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,145 @@ Initialize mono
 Mono path[0] = 'E:/Unity 2021.3.2fi/Unity 2021.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Unity 2021.3.2fi/Unity 2021.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Unity 2021.3.2fi/Unity 2021.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56696
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56284
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Unity 2021.3.2fi/Unity 2021.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006103 seconds.
+Registered in 0.006391 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 161.86 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 344.68 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.229 seconds
+- Completed reload, in  3.022 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1230ms)
-		BeginReloadAssembly (153ms)
+	ReloadAssembly (3023ms)
+		BeginReloadAssembly (512ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (901ms)
-			LoadAssemblies (153ms)
+		EndReloadAssembly (2272ms)
+			LoadAssemblies (511ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (252ms)
+			SetupTypeCache (380ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (63ms)
-			SetupLoadedEditorAssemblies (485ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (1746ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
+				InitializePlatformSupportModulesInManaged (13ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (162ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (230ms)
-				ProcessInitializeOnLoadMethodAttributes (80ms)
+				RefreshPlugins (345ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (1281ms)
+				ProcessInitializeOnLoadMethodAttributes (103ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.015103 seconds.
+Registered in 0.017989 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 125.06 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 181.22 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.047 seconds
+- Completed reload, in  3.951 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2048ms)
-		BeginReloadAssembly (295ms)
+	ReloadAssembly (3954ms)
+		BeginReloadAssembly (988ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (88ms)
-		EndReloadAssembly (1558ms)
-			LoadAssemblies (203ms)
+			CreateAndSetChildDomain (122ms)
+		EndReloadAssembly (2716ms)
+			LoadAssemblies (844ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (446ms)
+			SetupTypeCache (454ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (99ms)
-			SetupLoadedEditorAssemblies (796ms)
+			RebuildScriptCaches (114ms)
+			SetupLoadedEditorAssemblies (1897ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (125ms)
-				BeforeProcessingInitializeOnLoad (178ms)
-				ProcessInitializeOnLoadAttributes (405ms)
-				ProcessInitializeOnLoadMethodAttributes (75ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
+				RefreshPlugins (181ms)
+				BeforeProcessingInitializeOnLoad (398ms)
+				ProcessInitializeOnLoadAttributes (1218ms)
+				ProcessInitializeOnLoadMethodAttributes (88ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.80 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4100 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 38 unused Assets / (56.1 KB). Loaded Objects now: 4559.
 Memory consumption went from 154.0 MB to 154.0 MB.
-Total: 8.404500 ms (FindLiveObjects: 0.415600 ms CreateObjectMapping: 0.330700 ms MarkObjects: 7.521300 ms  DeleteObjects: 0.135600 ms)
+Total: 7.578700 ms (FindLiveObjects: 0.587700 ms CreateObjectMapping: 0.692000 ms MarkObjects: 6.153800 ms  DeleteObjects: 0.143100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015224 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.398 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2400ms)
+		BeginReloadAssembly (333ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (89ms)
+		EndReloadAssembly (1872ms)
+			LoadAssemblies (272ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (585ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (106ms)
+			SetupLoadedEditorAssemblies (855ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (170ms)
+				ProcessInitializeOnLoadAttributes (574ms)
+				ProcessInitializeOnLoadMethodAttributes (83ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (27ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.13 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4562.
+Memory consumption went from 152.1 MB to 152.1 MB.
+Total: 4.078300 ms (FindLiveObjects: 0.374400 ms CreateObjectMapping: 0.238200 ms MarkObjects: 3.417900 ms  DeleteObjects: 0.046200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,91 +215,91 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 432026.852256 seconds.
+  Time since last request: 437035.680130 seconds.
+  path: Assets/Logo-Taller.png
+  artifactKey: Guid(97a46615cb7062e47b5635fc7d98dd31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Logo-Taller.png using Guid(97a46615cb7062e47b5635fc7d98dd31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd007dd4ebca3a34405f111273b5b9c5c') in 0.335190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 162.767322 seconds.
+  path: Assets/botón 1 (1).png
+  artifactKey: Guid(9a78940ceb1d55f42a3ac96ee9540275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/botón 1 (1).png using Guid(9a78940ceb1d55f42a3ac96ee9540275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebe5bcb50a946f167c0c6ca98ebae24d') in 0.183181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.577826 seconds.
+  path: Assets/botón.png
+  artifactKey: Guid(9a78940ceb1d55f42a3ac96ee9540275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/botón.png using Guid(9a78940ceb1d55f42a3ac96ee9540275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a108082c6975fa087a6bee2a010e5697') in 0.062010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 221.654656 seconds.
+  path: Assets/Scenes/Modo historia/Modo historia nivel 1.unity
+  artifactKey: Guid(dfc68c48123c51044b42c6144c57fa19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Modo historia/Modo historia nivel 1.unity using Guid(dfc68c48123c51044b42c6144c57fa19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '839335bf96a5eceaa174e5076ba88b5a') in 0.009307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 91.497551 seconds.
+  path: Assets/Scenes/Modo historia/Modo historia nivel 2.unity
+  artifactKey: Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Modo historia/Modo historia nivel 2.unity using Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fad58811b07b0ffdae0b238cb382fc35') in 0.004122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.609757 seconds.
   path: Assets/Scenes/Modo historia/Modo historia nivel 3.unity
   artifactKey: Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 3.unity using Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fddb4de107303f65641a0527c9b077d6') in 0.008999 seconds 
+Start importing Assets/Scenes/Modo historia/Modo historia nivel 3.unity using Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e93895ecd48137a17b1f6c792a2aebd5') in 0.012681 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.410247 seconds.
-  path: Assets/Scenes/Modo historia/Modo historia nivel 2.unity
-  artifactKey: Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 2.unity using Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ea6c8ef9f3c3613270328bbb44610fe') in 0.004928 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 704.369554 seconds.
-  path: Assets/Scenes/Modo historia/Modo historia nivel 2.unity
-  artifactKey: Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 2.unity using Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d1a388a5654a631ece9e48f089d5edd') in 0.012148 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 124.674984 seconds.
-  path: Assets/Enemigos/PROYECTIL.png
-  artifactKey: Guid(8a0b9283431e21c4993b6cf7c1d076b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/PROYECTIL.png using Guid(8a0b9283431e21c4993b6cf7c1d076b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c1bdf4d82170d7dc6664df79a379c73') in 0.222218 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.658022 seconds.
-  path: Assets/Enemigos/Bullet.prefab
-  artifactKey: Guid(8ca0bd4ea4594d947bd86d49af03df57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Bullet.prefab using Guid(8ca0bd4ea4594d947bd86d49af03df57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42bf3b345c33e2ed50f2d6d5f3efbff0') in 0.062327 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.055195 seconds.
-  path: Assets/Enemigos/Bullet.prefab
-  artifactKey: Guid(8ca0bd4ea4594d947bd86d49af03df57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Bullet.prefab using Guid(8ca0bd4ea4594d947bd86d49af03df57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '122f55f5eacaa123d9cdbaed95dacf1c') in 0.020787 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.947170 seconds.
-  path: Assets/Enemigos/Bullet.prefab
-  artifactKey: Guid(8ca0bd4ea4594d947bd86d49af03df57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Bullet.prefab using Guid(8ca0bd4ea4594d947bd86d49af03df57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed0614617aee6f320c9db3c1cc4d50fa') in 0.022101 seconds 
+  Time since last request: 40.772671 seconds.
+  path: Assets/Scenes/Modo infinito/Modo infinito.unity
+  artifactKey: Guid(23a1056e9caee5f409b34177bc9c7e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Modo infinito/Modo infinito.unity using Guid(23a1056e9caee5f409b34177bc9c7e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dddc4c0df3e4701307904128942f3373') in 0.004450 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.019872 seconds.
+Registered in 0.017771 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.41 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.86 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.584 seconds
+- Completed reload, in  2.232 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2585ms)
-		BeginReloadAssembly (327ms)
+	ReloadAssembly (2234ms)
+		BeginReloadAssembly (264ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (76ms)
-		EndReloadAssembly (2007ms)
-			LoadAssemblies (301ms)
+			CreateAndSetChildDomain (58ms)
+		EndReloadAssembly (1814ms)
+			LoadAssemblies (219ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (597ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (112ms)
-			SetupLoadedEditorAssemblies (939ms)
+			SetupTypeCache (467ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (981ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (26ms)
+				InitializePlatformSupportModulesInManaged (17ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
+				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (179ms)
-				ProcessInitializeOnLoadAttributes (610ms)
-				ProcessInitializeOnLoadMethodAttributes (116ms)
+				ProcessInitializeOnLoadAttributes (541ms)
+				ProcessInitializeOnLoadMethodAttributes (235ms)
 				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (34ms)
+			AwakeInstancesAfterBackupRestoration (27ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 6.82 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 7.39 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4571.
-Memory consumption went from 156.5 MB to 156.4 MB.
-Total: 7.792200 ms (FindLiveObjects: 0.690000 ms CreateObjectMapping: 0.745400 ms MarkObjects: 6.283700 ms  DeleteObjects: 0.070600 ms)
+Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4574.
+Memory consumption went from 156.4 MB to 156.4 MB.
+Total: 7.162600 ms (FindLiveObjects: 1.033400 ms CreateObjectMapping: 0.556200 ms MarkObjects: 5.512000 ms  DeleteObjects: 0.059200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -257,703 +313,67 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 228.964229 seconds.
-  path: Assets/Scenes/Modo historia/Modo historia nivel 2.unity
-  artifactKey: Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 2.unity using Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c76eedf0668fbedc508c6c0621e42b86') in 0.014101 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.238638 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo1.prefab
-  artifactKey: Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo1.prefab using Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '623504feb7338914a0b1c09cb5824511') in 0.103237 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo3.prefab
-  artifactKey: Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo3.prefab using Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57d7f3a1daa85be71b89729e4b021ea8') in 0.028458 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo5.prefab
-  artifactKey: Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo5.prefab using Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a2507d60a7f4c1fce5e359e39111034') in 0.020997 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 14.495782 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo1.prefab
-  artifactKey: Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo1.prefab using Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3eb2ca4a50bad1c2c90615aa87ca148') in 0.024419 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo5.prefab
-  artifactKey: Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo5.prefab using Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec09d75cabfeeac25f3f0eb5a4c95448') in 0.017598 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.465262 seconds.
-  path: Assets/Enemigos/Nivel 1/Enemigo3.prefab
-  artifactKey: Guid(8eb068d490ff4b74b9748be1a952f042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 1/Enemigo3.prefab using Guid(8eb068d490ff4b74b9748be1a952f042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '701ad38d1859da7c1b989f5f4952a88c') in 0.021845 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.119152 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo4.prefab
-  artifactKey: Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo4.prefab using Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e48cf20866ca6cd19e5db6fb7d68244') in 0.025333 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.317743 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo4.prefab
-  artifactKey: Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo4.prefab using Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49a740259f6a52575654afd08caf3c97') in 0.018345 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 66.632228 seconds.
-  path: Assets/Enemigos/Nivel 2/Mesa de trabajo 6.png
-  artifactKey: Guid(2ba98ded0de261c418ec8560a4f7aa48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Mesa de trabajo 6.png using Guid(2ba98ded0de261c418ec8560a4f7aa48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c65847bcd76b2b377a9a312a8e3d3e5e') in 0.083546 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Enemigos/Nivel 2/Mesa de trabajo 8.png
-  artifactKey: Guid(6de3465bf23947145a7251e6f5b6aafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Mesa de trabajo 8.png using Guid(6de3465bf23947145a7251e6f5b6aafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50aac4769f6d8d8517e9d8accb606d03') in 0.049231 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Enemigos/Nivel 2/Mesa de trabajo 9.png
-  artifactKey: Guid(236b017cef41e2d4c9fcf3c53d0d6db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Mesa de trabajo 9.png using Guid(236b017cef41e2d4c9fcf3c53d0d6db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8628c8d646eb852a5abf4411e82c06e9') in 0.053032 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 42.001246 seconds.
-  path: Assets/Enemigos/Nivel 3/Mesa de trabajo 11.png
-  artifactKey: Guid(2f8eb6c8d212a9c43b4aead415efcf31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Mesa de trabajo 11.png using Guid(2f8eb6c8d212a9c43b4aead415efcf31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c08662d8e8654ef0c6a388d1925eb81') in 0.039192 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Enemigos/Nivel 3/Mesa de trabajo 15.png
-  artifactKey: Guid(88e81390e4de72b46b10fe5b0e85d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Mesa de trabajo 15.png using Guid(88e81390e4de72b46b10fe5b0e85d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9979674098c0fe60e489a5e7f31105f8') in 0.047080 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 42.056849 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo4.png
-  artifactKey: Guid(6de3465bf23947145a7251e6f5b6aafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo4.png using Guid(6de3465bf23947145a7251e6f5b6aafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '175161c78ad32fc7072f1304b0436c21') in 0.024944 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.363353 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo1.png
-  artifactKey: Guid(2ba98ded0de261c418ec8560a4f7aa48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo1.png using Guid(2ba98ded0de261c418ec8560a4f7aa48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba5f16a2c04170060b436b4ef3bb135') in 0.029115 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.122898 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo2.png
-  artifactKey: Guid(6049655fdbecbf448890bd9f8955ee17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo2.png using Guid(6049655fdbecbf448890bd9f8955ee17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b1558a0b2f48ca8c55fc43c901d1e3') in 0.034366 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 29.910958 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo3.png
-  artifactKey: Guid(71b415c40d1f7034ab4631d7bbc56743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo3.png using Guid(71b415c40d1f7034ab4631d7bbc56743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a4e14044851e4bbc97631244930830') in 0.040234 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.279918 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo5.png
-  artifactKey: Guid(236b017cef41e2d4c9fcf3c53d0d6db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo5.png using Guid(236b017cef41e2d4c9fcf3c53d0d6db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fedcdcce691a179f5660b0798e355c92') in 0.029771 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.306869 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo1.png
-  artifactKey: Guid(f41b194d8a3d27b4995fa77e45fc1cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo1.png using Guid(f41b194d8a3d27b4995fa77e45fc1cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c376cbd35c43706c14cbbb693ebacefe') in 0.029192 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 49.992059 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo3.png
-  artifactKey: Guid(88e81390e4de72b46b10fe5b0e85d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo3.png using Guid(88e81390e4de72b46b10fe5b0e85d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18a47e7cce879bb20b1b57a23723098f') in 0.026733 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 148.952748 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo4.png
-  artifactKey: Guid(4f0b75b379ddb7b42b3ab8acaa0ea7df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo4.png using Guid(4f0b75b379ddb7b42b3ab8acaa0ea7df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11fad514251efb4e552006fcc184cc3e') in 0.031580 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.518958 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo2.png
-  artifactKey: Guid(7187f727a09c7dc4e8c20c7d9f372e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo2.png using Guid(7187f727a09c7dc4e8c20c7d9f372e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c6aef518dfe90b03e5d24d8ae729da4') in 0.047880 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.246278 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo5.png
-  artifactKey: Guid(2f8eb6c8d212a9c43b4aead415efcf31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo5.png using Guid(2f8eb6c8d212a9c43b4aead415efcf31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '003ed56341f45fbbd291a7bef7e3f18a') in 0.024923 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.309058 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo1.prefab
-  artifactKey: Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo1.prefab using Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae1be55d561ba77ccb9735f354b79608') in 0.025215 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.360774 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo2.prefab
-  artifactKey: Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo2.prefab using Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02f4a2883aa37a56f64a7c8f10ef5616') in 0.022462 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.393781 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo3.prefab
-  artifactKey: Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo3.prefab using Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65d07e299d869887a20e061e1a290f90') in 0.035720 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.322854 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo4.prefab
-  artifactKey: Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo4.prefab using Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9aa1e11cb668abb1af98cccd5b9bb7f') in 0.023230 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.308114 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo5.prefab
-  artifactKey: Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo5.prefab using Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2f2ec8794d50290024414f7a517128e') in 0.024630 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.198963 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo1.prefab
-  artifactKey: Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo1.prefab using Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5c423bbeb4dd24bdb52c7c83c471416') in 0.024479 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.620126 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo2.prefab
-  artifactKey: Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo2.prefab using Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd17da177585e1f51e333b8bc7bc58b50') in 0.025202 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.267270 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo3.prefab
-  artifactKey: Guid(6d72bcdc72aafb549a99195a882cda76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo3.prefab using Guid(6d72bcdc72aafb549a99195a882cda76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '186cd2e9b270f05d2aba0e896d351b2e') in 0.023502 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.884251 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo4.prefab
-  artifactKey: Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo4.prefab using Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '976961fa2783e830b02947b1249fce85') in 0.020514 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.962347 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo5.prefab
-  artifactKey: Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo5.prefab using Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26d2aa077644a8c0f81cbbac219acd48') in 0.023016 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.014612 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.85 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.469 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2470ms)
-		BeginReloadAssembly (369ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (107ms)
-		EndReloadAssembly (1889ms)
-			LoadAssemblies (274ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (565ms)
-			ReleaseScriptCaches (5ms)
-			RebuildScriptCaches (134ms)
-			SetupLoadedEditorAssemblies (861ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (27ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (184ms)
-				ProcessInitializeOnLoadAttributes (544ms)
-				ProcessInitializeOnLoadMethodAttributes (96ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (24ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 5.49 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4604.
-Memory consumption went from 156.6 MB to 156.6 MB.
-Total: 5.701800 ms (FindLiveObjects: 0.477600 ms CreateObjectMapping: 0.435100 ms MarkObjects: 4.712600 ms  DeleteObjects: 0.057200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 30.295244 seconds.
-  path: Assets/Bosco
-  artifactKey: Guid(2aa25b50e0bcf8f48b3b27ff4cbd7de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bosco using Guid(2aa25b50e0bcf8f48b3b27ff4cbd7de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84a2e0a8f230515c6f57c53f71e76203') in 0.019423 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.550723 seconds.
-  path: Assets/Bosco/EL-BOSCO.png
-  artifactKey: Guid(97aa75932741d72428e5119dffcae590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bosco/EL-BOSCO.png using Guid(97aa75932741d72428e5119dffcae590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fd20b53300c28364666fad2e9e4f506') in 0.118507 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Bosco/EL-BOSCO3.png
-  artifactKey: Guid(03972c5089679574e818a12ee9455a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bosco/EL-BOSCO3.png using Guid(03972c5089679574e818a12ee9455a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8e1cc2f946bcc50a72e8278af93b3c5') in 0.053942 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 752.999885 seconds.
-  path: Assets/Bosco/El Bosco.png
-  artifactKey: Guid(b0ff6589a45d2354588866ce74a8a74c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bosco/El Bosco.png using Guid(b0ff6589a45d2354588866ce74a8a74c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7e93bb84a491585a366e94fad09fefd') in 0.493618 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 163.027228 seconds.
-  path: Assets/Bosco/El Bosco 1.png
-  artifactKey: Guid(74df21752e1629f4e95856b9d725a4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bosco/El Bosco 1.png using Guid(74df21752e1629f4e95856b9d725a4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e005ad8a619f992f5bf7a20dc4cd6f1c') in 0.040738 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 51.451115 seconds.
-  path: Assets/Bosco/El Bosco 2.png
-  artifactKey: Guid(2b21b20f35071b1478608b7e330690aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bosco/El Bosco 2.png using Guid(2b21b20f35071b1478608b7e330690aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0a3b0fed0963b8d3b6cfece51826a28') in 0.042536 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 208.355884 seconds.
+  Time since last request: 103.736413 seconds.
   path: Assets/Scenes/Modo historia/Modo historia nivel 1.unity
   artifactKey: Guid(dfc68c48123c51044b42c6144c57fa19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 1.unity using Guid(dfc68c48123c51044b42c6144c57fa19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a61e31ffc01527f2fea9d54c72d1e7d7') in 0.012810 seconds 
+Start importing Assets/Scenes/Modo historia/Modo historia nivel 1.unity using Guid(dfc68c48123c51044b42c6144c57fa19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1be3c37dcf7fa08ec2b88a0187946f52') in 0.014904 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.166512 seconds.
+  Time since last request: 14.567327 seconds.
+  path: Assets/Scenes/Modo historia/Modo historia nivel 2.unity
+  artifactKey: Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Modo historia/Modo historia nivel 2.unity using Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f63dd638f89425df0ab68a7ac61df023') in 0.003422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.020216 seconds.
   path: Assets/Scenes/Modo historia/Modo historia nivel 3.unity
   artifactKey: Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 3.unity using Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb2b47ff7eb5f3df0947efc7006e6b3') in 0.013015 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.926790 seconds.
-  path: Assets/Scenes/Modo infinito/Modo infinito.unity
-  artifactKey: Guid(23a1056e9caee5f409b34177bc9c7e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo infinito/Modo infinito.unity using Guid(23a1056e9caee5f409b34177bc9c7e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc4e5c2fb7c052fb213b2e26f7ddd44f') in 0.011381 seconds 
+Start importing Assets/Scenes/Modo historia/Modo historia nivel 3.unity using Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1ec22950c608fa135d351e941ae34c8') in 0.005048 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.019771 seconds.
+Registered in 0.019397 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.89 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.76 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.367 seconds
+- Completed reload, in  2.656 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2369ms)
-		BeginReloadAssembly (365ms)
+	ReloadAssembly (2658ms)
+		BeginReloadAssembly (651ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (19ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (109ms)
-		EndReloadAssembly (1789ms)
-			LoadAssemblies (279ms)
+			CreateAndSetChildDomain (58ms)
+		EndReloadAssembly (1858ms)
+			LoadAssemblies (621ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (536ms)
+			SetupTypeCache (547ms)
 			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (115ms)
-			SetupLoadedEditorAssemblies (813ms)
+			RebuildScriptCaches (122ms)
+			SetupLoadedEditorAssemblies (848ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (24ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (190ms)
-				ProcessInitializeOnLoadAttributes (501ms)
-				ProcessInitializeOnLoadMethodAttributes (87ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (25ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 7.74 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4620.
-Memory consumption went from 156.6 MB to 156.6 MB.
-Total: 5.693000 ms (FindLiveObjects: 0.370000 ms CreateObjectMapping: 0.326300 ms MarkObjects: 4.959300 ms  DeleteObjects: 0.035900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015366 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.35 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.345 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2346ms)
-		BeginReloadAssembly (316ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (79ms)
-		EndReloadAssembly (1825ms)
-			LoadAssemblies (264ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (551ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (124ms)
-			SetupLoadedEditorAssemblies (837ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (25ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (180ms)
-				ProcessInitializeOnLoadAttributes (529ms)
-				ProcessInitializeOnLoadMethodAttributes (91ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (24ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 6.22 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (25.7 KB). Loaded Objects now: 4623.
-Memory consumption went from 156.6 MB to 156.6 MB.
-Total: 5.826500 ms (FindLiveObjects: 0.501300 ms CreateObjectMapping: 0.420100 ms MarkObjects: 4.849600 ms  DeleteObjects: 0.053700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 108.435280 seconds.
-  path: Assets/Scenes/Modo historia/Modo historia nivel 1.unity
-  artifactKey: Guid(dfc68c48123c51044b42c6144c57fa19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 1.unity using Guid(dfc68c48123c51044b42c6144c57fa19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88bec4e137d84ac450fde701a100c911') in 0.010903 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 15.819004 seconds.
-  path: Assets/Scenes/Modo historia/Modo historia nivel 2.unity
-  artifactKey: Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 2.unity using Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '792f5faca2fc292b32c85b4e51ee9731') in 0.004183 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.926005 seconds.
-  path: Assets/Scenes/Modo historia/Modo historia nivel 3.unity
-  artifactKey: Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 3.unity using Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3fcb19672ee3dc724701d160851f428') in 0.005843 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 31.144725 seconds.
-  path: Assets/Scenes/Modo historia/Modo historia nivel 2.unity
-  artifactKey: Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 2.unity using Guid(7bdc7407d3a812c47ada5b7c5455c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73ff2dbc6bb0b79258f16a988a512ae') in 0.003951 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 59.967448 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs
-  artifactKey: Guid(484816e1a55975b4abe1506aacee14af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs using Guid(484816e1a55975b4abe1506aacee14af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8011cd3ffa090c15293a78bde389ce') in 0.009973 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 15.665249 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs
-  artifactKey: Guid(175e1f3c54040494a9cbfe2351dfd250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs using Guid(175e1f3c54040494a9cbfe2351dfd250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aa53605e768198c06c5bb8c4817dff3') in 0.009315 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.201175 seconds.
-  path: Assets/Enemigos/Nivel 1/Prefabs
-  artifactKey: Guid(0b3c85918a825e34e9b64f9f769c969e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 1/Prefabs using Guid(0b3c85918a825e34e9b64f9f769c969e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a2b02f4474a9e8d22c50c8f27f900b5') in 0.002546 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016458 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.394 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2395ms)
-		BeginReloadAssembly (314ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (71ms)
-		EndReloadAssembly (1865ms)
-			LoadAssemblies (278ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (548ms)
-			ReleaseScriptCaches (4ms)
-			RebuildScriptCaches (121ms)
-			SetupLoadedEditorAssemblies (873ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (28ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (215ms)
-				ProcessInitializeOnLoadAttributes (521ms)
-				ProcessInitializeOnLoadMethodAttributes (101ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (26ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 5.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4626.
-Memory consumption went from 156.6 MB to 156.6 MB.
-Total: 6.986800 ms (FindLiveObjects: 0.881800 ms CreateObjectMapping: 1.000500 ms MarkObjects: 5.068400 ms  DeleteObjects: 0.034800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016488 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.347 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2349ms)
-		BeginReloadAssembly (334ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (18ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (88ms)
-		EndReloadAssembly (1796ms)
-			LoadAssemblies (264ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (527ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (117ms)
-			SetupLoadedEditorAssemblies (832ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (29ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (181ms)
-				ProcessInitializeOnLoadAttributes (522ms)
-				ProcessInitializeOnLoadMethodAttributes (91ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (25ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 7.23 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4629.
-Memory consumption went from 156.6 MB to 156.6 MB.
-Total: 5.493800 ms (FindLiveObjects: 0.461900 ms CreateObjectMapping: 0.476300 ms MarkObjects: 4.505200 ms  DeleteObjects: 0.048700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 345.661357 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo2.png
-  artifactKey: Guid(6049655fdbecbf448890bd9f8955ee17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo2.png using Guid(6049655fdbecbf448890bd9f8955ee17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '299f1707fba9411e544eef77bc821e78') in 0.136909 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 16.464864 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo3.png
-  artifactKey: Guid(71b415c40d1f7034ab4631d7bbc56743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo3.png using Guid(71b415c40d1f7034ab4631d7bbc56743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a9e3435b0a4aa9d366c43cec0c285ce') in 0.041638 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 14.629665 seconds.
-  path: Assets/Enemigos/Nivel 2/Enemigo5.png
-  artifactKey: Guid(236b017cef41e2d4c9fcf3c53d0d6db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Enemigo5.png using Guid(236b017cef41e2d4c9fcf3c53d0d6db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b19dfa434a63e7f32ccf8069c88ea16') in 0.036191 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 64.929146 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo2.prefab
-  artifactKey: Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo2.prefab using Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e490cda00a9e8b5c5694ef48a4ae365a') in 0.050723 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo5.prefab
-  artifactKey: Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo5.prefab using Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7318cf96af42163a1089b03403a4620') in 0.025816 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 22.104874 seconds.
-  path: Assets/Scenes/Modo historia/Modo historia nivel 3.unity
-  artifactKey: Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Modo historia/Modo historia nivel 3.unity using Guid(406f7a069a765d34a87d2e666fca10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3e23c542cc6ddddc13388eb0b8f1c41') in 0.003609 seconds 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 9.29 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (21.9 KB). Loaded Objects now: 4633.
-Memory consumption went from 75.8 MB to 75.8 MB.
-Total: 5.268700 ms (FindLiveObjects: 0.495700 ms CreateObjectMapping: 0.286400 ms MarkObjects: 4.439700 ms  DeleteObjects: 0.045700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 250.374658 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo2.png
-  artifactKey: Guid(7187f727a09c7dc4e8c20c7d9f372e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo2.png using Guid(7187f727a09c7dc4e8c20c7d9f372e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb5f44b2e08fdabadb4a6dae31621742') in 0.038352 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.959278 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo3.png
-  artifactKey: Guid(88e81390e4de72b46b10fe5b0e85d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo3.png using Guid(88e81390e4de72b46b10fe5b0e85d8c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31c80973e528dbbe9d22c3c0cd7f252') in 0.030936 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.293330 seconds.
-  path: Assets/Enemigos/Nivel 3/Enemigo5.png
-  artifactKey: Guid(2f8eb6c8d212a9c43b4aead415efcf31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Enemigo5.png using Guid(2f8eb6c8d212a9c43b4aead415efcf31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da37f0181d96e523bfeb1a4b87c3390') in 0.033230 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015842 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.56 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.425 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2426ms)
-		BeginReloadAssembly (342ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (15ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (95ms)
-		EndReloadAssembly (1877ms)
-			LoadAssemblies (280ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (546ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (134ms)
-			SetupLoadedEditorAssemblies (841ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (26ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (2ms)
 				BeforeProcessingInitializeOnLoad (188ms)
-				ProcessInitializeOnLoadAttributes (520ms)
-				ProcessInitializeOnLoadMethodAttributes (96ms)
+				ProcessInitializeOnLoadAttributes (531ms)
+				ProcessInitializeOnLoadMethodAttributes (95ms)
 				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (26ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 6.81 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 5.69 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4635.
-Memory consumption went from 156.7 MB to 156.6 MB.
-Total: 5.148000 ms (FindLiveObjects: 0.473500 ms CreateObjectMapping: 0.554600 ms MarkObjects: 4.083800 ms  DeleteObjects: 0.033700 ms)
+Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4577.
+Memory consumption went from 156.5 MB to 156.4 MB.
+Total: 7.911100 ms (FindLiveObjects: 0.829100 ms CreateObjectMapping: 0.842300 ms MarkObjects: 6.193500 ms  DeleteObjects: 0.044800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -962,343 +382,42 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 220.259215 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo1.prefab
-  artifactKey: Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo1.prefab using Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a3801a15e5fc4284a207d3136944c61') in 0.110557 seconds 
+  Time since last request: 41.632076 seconds.
+  path: Assets/Scenes/Menu/Tutorial 2.unity
+  artifactKey: Guid(2f714e1ce4540b945a425badcb1d37cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menu/Tutorial 2.unity using Guid(2f714e1ce4540b945a425badcb1d37cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c30e92c7188de86d2a3a9fa1af56eb7') in 0.021008 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.502867 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo1.prefab
-  artifactKey: Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo1.prefab using Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bdddbeab46cbed2f843bd64c55c0c36') in 0.021828 seconds 
+  Time since last request: 632.149437 seconds.
+  path: Assets/Scenes/Menu/Tutorial 2.unity
+  artifactKey: Guid(2f714e1ce4540b945a425badcb1d37cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menu/Tutorial 2.unity using Guid(2f714e1ce4540b945a425badcb1d37cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0aadc5724af73c644044637dba1aa69') in 0.004356 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.200127 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo1.prefab
-  artifactKey: Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo1.prefab using Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbdf886479c4a6db673d5a92aeaf4467') in 0.024299 seconds 
+  Time since last request: 0.633143 seconds.
+  path: Assets/Scenes/Menu/Tutorial.unity
+  artifactKey: Guid(2672d861446c6e34c948d253e94777b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menu/Tutorial.unity using Guid(2672d861446c6e34c948d253e94777b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bf6699d2ccfb41711c127fc86d919d1') in 0.008620 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.835570 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo1.prefab
-  artifactKey: Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo1.prefab using Guid(9788645196b92af4e827aa8965da9959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bc06a1812945e9df8c94a32e76da90c') in 0.020529 seconds 
+  Time since last request: 15.472521 seconds.
+  path: Assets/Scenes/Menu/Menu principal.unity
+  artifactKey: Guid(fd5fa9d39a744e043841458877846bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menu/Menu principal.unity using Guid(fd5fa9d39a744e043841458877846bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4e8b8c2ba6bc210bf2ec56ece53aa39') in 0.011023 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.535007 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo2.prefab
-  artifactKey: Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo2.prefab using Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b75e6a02879bfd19beae73eefa91ff9') in 0.017212 seconds 
+  Time since last request: 10.278851 seconds.
+  path: Assets/Scenes/Menu/Creditos.unity
+  artifactKey: Guid(41cf0cb36932db14282ff237166d6c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menu/Creditos.unity using Guid(41cf0cb36932db14282ff237166d6c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0af81cc361cc90a491fdd6c347208be2') in 0.013618 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.001381 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo2.prefab
-  artifactKey: Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo2.prefab using Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a97fcc5458bfe6ffe808ef58bcc95c92') in 0.016256 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.645318 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo2.prefab
-  artifactKey: Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo2.prefab using Guid(cbf9932af73ad4142bad2f4c11e4f4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad48f96d2957e9b432ff4ded2f89a2e8') in 0.015200 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.286856 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo3.prefab
-  artifactKey: Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo3.prefab using Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42ee9e43a0204ea8ecb164d45b4f4a0e') in 0.018755 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.619602 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo3.prefab
-  artifactKey: Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo3.prefab using Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '355c995cb5c4b3070ae53d17b93832ee') in 0.017156 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.535914 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo3.prefab
-  artifactKey: Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo3.prefab using Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80fb807c817dd9ff2bb10f70a5b590ea') in 0.018143 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.046889 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo3.prefab
-  artifactKey: Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo3.prefab using Guid(53651966ad1e4724898afb46e5cc5463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e4713224b17af8c8d8600ad7c70a852') in 0.019477 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.457144 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo4.prefab
-  artifactKey: Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo4.prefab using Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '544c252408f86a5f524b3d793e0aa677') in 0.027743 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.184313 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo4.prefab
-  artifactKey: Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo4.prefab using Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2744f11fa1a613c909e4d6fbb550f2e') in 0.018945 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.814564 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo4.prefab
-  artifactKey: Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo4.prefab using Guid(c88275eb84fef04448ea6de08980785d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d906edbf9b5910efc2d5a7744b1613') in 0.018444 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.202628 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo5.prefab
-  artifactKey: Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo5.prefab using Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3c13b187e5f44342f6b91908375d412') in 0.017793 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.074533 seconds.
-  path: Assets/Enemigos/Nivel 2/Prefabs/Enemigo5.prefab
-  artifactKey: Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 2/Prefabs/Enemigo5.prefab using Guid(ada51187404a31c439b1c9d41d43f26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8af29d5971af5275a3b0c459a5e6141') in 0.016075 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.149530 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo2.prefab
-  artifactKey: Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo2.prefab using Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '704215d06dcf7968e77533caea9f53fe') in 0.020177 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab
-  artifactKey: Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab using Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '080f6c1ae832b72989de2bfaf14074ee') in 0.025019 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.507494 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo1.prefab
-  artifactKey: Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo1.prefab using Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d0d64b6cd78495e1e2fdbc7ee77321') in 0.023188 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.998625 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo1.prefab
-  artifactKey: Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo1.prefab using Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40342b733ac0a2f276e399d916356305') in 0.015669 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.017345 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo1.prefab
-  artifactKey: Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo1.prefab using Guid(e78857b483bb0424bb680fc33ad6ae2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b11c4f7c211940589aac1bc1e2878eb') in 0.015266 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.156773 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo2.prefab
-  artifactKey: Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo2.prefab using Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd1c04c22d029f96261e11b5956d7a1a') in 0.015164 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.615706 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo2.prefab
-  artifactKey: Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo2.prefab using Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adfb9b196c4fabece12e2e0d031c6517') in 0.017254 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.825672 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo2.prefab
-  artifactKey: Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo2.prefab using Guid(e02ca1c7c35b31b42bf079e0c7e5ac0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ef12ca6a64a3da11f1e1a0509b48c74') in 0.016785 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.676878 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo3.prefab
-  artifactKey: Guid(6d72bcdc72aafb549a99195a882cda76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo3.prefab using Guid(6d72bcdc72aafb549a99195a882cda76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3d1e97e5f864de6b681ba429cc68e87') in 0.024131 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.182606 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo3.prefab
-  artifactKey: Guid(6d72bcdc72aafb549a99195a882cda76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo3.prefab using Guid(6d72bcdc72aafb549a99195a882cda76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de9967da8d728d330936798d93426698') in 0.022257 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.616357 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo3.prefab
-  artifactKey: Guid(6d72bcdc72aafb549a99195a882cda76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo3.prefab using Guid(6d72bcdc72aafb549a99195a882cda76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65d65add6a023ecbac10c46ac4043d5b') in 0.077774 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.279590 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo4.prefab
-  artifactKey: Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo4.prefab using Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdf8c52bc31c8501924d0c1c44015273') in 0.024244 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.403606 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo4.prefab
-  artifactKey: Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo4.prefab using Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4c95665fd4be1e87bbb9643b371fd11') in 0.022778 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.477291 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo4.prefab
-  artifactKey: Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo4.prefab using Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fc86dfffcb538de19beb362dc82dac7') in 0.023828 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.200975 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo4.prefab
-  artifactKey: Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo4.prefab using Guid(f6304ad049c2975469204bbe516574b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd70b128179eb2e85609e9fc801c9dbc') in 0.022758 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.669826 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab
-  artifactKey: Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab using Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b74891103b00bc5d50c2b72db39ff142') in 0.015943 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.416333 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab
-  artifactKey: Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab using Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbdb158d5c6f32879f1082241396bae0') in 0.015460 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.615450 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab
-  artifactKey: Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab using Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a40190da1228abf208e8cf912da31307') in 0.081103 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.493630 seconds.
-  path: Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab
-  artifactKey: Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemigos/Nivel 3/Prefabs/Enemigo5.prefab using Guid(5e3c4cd263d54494485098f2e8f1f3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f963daea783ce28e615b3137f52c7ff') in 0.016716 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.592874 seconds.
-  path: Assets/Scrips/Enemigos.cs
-  artifactKey: Guid(e92ebf8a6571e504995c3818b7badccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scrips/Enemigos.cs using Guid(e92ebf8a6571e504995c3818b7badccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a94e11ecea0f33d7a74894772e240a0') in 0.014825 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 36.674682 seconds.
-  path: Assets/Scrips/Enemigos.cs
-  artifactKey: Guid(e92ebf8a6571e504995c3818b7badccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scrips/Enemigos.cs using Guid(e92ebf8a6571e504995c3818b7badccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ebbf4bac5ad98abcf728869c3cf1fed') in 0.005627 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013051 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.43 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.047 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2048ms)
-		BeginReloadAssembly (272ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (61ms)
-		EndReloadAssembly (1626ms)
-			LoadAssemblies (222ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (429ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (101ms)
-			SetupLoadedEditorAssemblies (867ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (184ms)
-				ProcessInitializeOnLoadAttributes (597ms)
-				ProcessInitializeOnLoadMethodAttributes (57ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 5.14 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4638.
-Memory consumption went from 156.7 MB to 156.7 MB.
-Total: 5.134900 ms (FindLiveObjects: 0.477300 ms CreateObjectMapping: 0.510100 ms MarkObjects: 4.108400 ms  DeleteObjects: 0.037100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016555 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Usuario\Desktop\El Bosco Juego\El-Bosco-Juego\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.497 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2499ms)
-		BeginReloadAssembly (337ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (18ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (89ms)
-		EndReloadAssembly (1951ms)
-			LoadAssemblies (276ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (547ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (119ms)
-			SetupLoadedEditorAssemblies (932ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (29ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (184ms)
-				ProcessInitializeOnLoadAttributes (611ms)
-				ProcessInitializeOnLoadMethodAttributes (97ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (29ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 6.37 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4076 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4641.
-Memory consumption went from 156.8 MB to 156.7 MB.
-Total: 6.559200 ms (FindLiveObjects: 0.641500 ms CreateObjectMapping: 0.762500 ms MarkObjects: 5.078700 ms  DeleteObjects: 0.074200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 36.409965 seconds.
+  path: Assets/Scenes/Menu/Tutorial.unity
+  artifactKey: Guid(2672d861446c6e34c948d253e94777b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menu/Tutorial.unity using Guid(2672d861446c6e34c948d253e94777b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55177d6cc85dc627190bbe75009c2e67') in 0.003796 seconds 
