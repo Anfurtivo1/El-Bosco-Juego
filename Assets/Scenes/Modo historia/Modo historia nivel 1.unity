@@ -9011,7 +9011,7 @@ MonoBehaviour:
   potenciaSalto: 15
   score: 0
   texto: {fileID: 1443566114}
-  vidas: 1000
+  vidas: 1
   damage: 1
   proyectil: {fileID: 5361478524353057498, guid: 1458f9e1769242149ac052afde4a0fd8, type: 3}
   proyectilGenerator: {fileID: 1309601337}
@@ -9135,8 +9135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309601335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.27, y: -2.82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7.7443, y: -3.1543, z: 0}
+  m_LocalScale: {x: 0.6838, y: 0.6838, z: 0.6838}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1601962193}
